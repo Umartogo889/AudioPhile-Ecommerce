@@ -1,0 +1,85 @@
+.Navbar {
+    position: fixed;
+    display: flex;
+    top: 0;
+    justify-content: space-evenly;
+
+    background: #101010;
+    color: #fff;
+    z-index: 999;
+    width: 100%;
+}
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    width: 1110px;
+    padding: 30px 0;
+    border-bottom: 1px solid rgb(250, 250, 250, 0.1);
+}
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+.nav-link {
+    font-family: "Manrope";
+    font-size: 14px;
+    color: #fff;
+    transition: all 0.5s;
+    font-weight: 700;
+    margin-right: 45px;
+}
+.nav-link:hover {
+    color: var(--color-brown);
+}
+.Navbar svg {
+    color: #fff;
+}
+
+/* hero  */
+
+.hero {
+    background: #101010;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.hero-container {
+    position: relative;
+    display: flex;
+    width: 1110px;
+}
+
+/* hero main img  */
+.hero_main_img__box {
+    height: 729px;
+}
+
+.hero-main-img {
+    position: absolute;
+    height: 779px;
+    right: 0;
+}
+/* hero text block  */
+
+.hero-text-title {
+    position: absolute;
+    justify-content: right;
+    z-index: 111;
+    color: #fff;
+    left: 0;
+    top: 30%;
+    width: 350px;
+    font-family: "Manrope";
+    margin-right: 50px;
+}
+
+.hero-text-title p {
+    color: #fafafa80;
+}
+
+.new-product {
+    letter-spacing: 15px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
