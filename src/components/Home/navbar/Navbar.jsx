@@ -1,38 +1,61 @@
 // style
+
+import { useState } from "react";
 import "../Home.css";
 import "../HomeResponsive.css";
 
-function Navbar() {
+// Component
+import ProductsCard from "../MenuCard/ProductsCard";
+function Navbar({
+  ShowHomeCom,
+  ShowHeadphonesCom,
+  ShowSpeakersCom,
+  ShowEarphonesCom,
+}) {
+  const [ShowMenu, SetShowMenu] = useState(false);
+
+  function CloseMenu(e) {
+    if (e.target.className === "backdrop-bg") {
+      SetShowMenu(false);
+      console.log(e);
+    }
+  }
+
   return (
     <>
       <div className="Navbar">
         <div className="nav-container">
-          <div className="nav-menu">
+          <div
+            onClick={CloseMenu}
+            onKeyDown={CloseMenu}
+            className={!ShowMenu ? "Rembg" : "backdrop-bg"}
+          >
+            <div className={ShowMenu ? "showMenu" : "topMenu"}>
+              <ProductsCard />
+            </div>
+          </div>
+
+          <div
+            className="nav-menu"
+            onClick={() => SetShowMenu(ShowMenu ? false : true)}
+          >
             <img src="./img/icon-hamburger-menu.svg" alt="" />
           </div>
           <div className="nav-logo">
             <img src="./img/logo.svg" alt="" />
           </div>
           <ul className="nav-list">
-            <li className="list-item">
-              <a className="nav-link" href="#">
-                HOME
-              </a>
+            <li className="list-item" onClick={ShowHomeCom}>
+              HOME
             </li>
-            <li className="list-item">
-              <a className="nav-link" href="#">
-                HEADPHONES
-              </a>
+            <li className="list-item" onClick={ShowHeadphonesCom}>
+              HEADPHONES
             </li>
-            <li className="list-item">
-              <a className="nav-link" href="#">
-                SPEAKERS
-              </a>
+            <li className="list-item" onClick={ShowSpeakersCom}>
+              SPEAKERS
             </li>
-            <li className="list-item">
-              <a className="nav-link" href="#">
-                EARPHONES
-              </a>
+            <li className="list-item" onClick={ShowEarphonesCom}>
+              EARPHONES
             </li>
           </ul>
           <svg

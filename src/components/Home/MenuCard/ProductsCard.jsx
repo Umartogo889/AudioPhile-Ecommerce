@@ -1,10 +1,21 @@
+// style
 import "./ProductsCard.css";
+
+import { v4 as uuidv4 } from "uuid";
 
 function ProductsCard() {
   const ProductsCard = [
-    { Img: "./img/category-img-headphones.png", name: "HEADPHONES" },
-    { Img: "./img/category-img-speakers.png", name: "SPEAKERS" },
-    { Img: "./img/category-img-earphones.png", name: "EARPHONES" },
+    {
+      Img: "./img/category-img-headphones.png",
+      name: "HEADPHONES",
+      id: uuidv4(),
+    },
+    { Img: "./img/category-img-speakers.png", name: "SPEAKERS", id: uuidv4() },
+    {
+      Img: "./img/category-img-earphones.png",
+      name: "EARPHONES",
+      id: uuidv4(),
+    },
   ];
 
   return (
@@ -13,12 +24,13 @@ function ProductsCard() {
         {ProductsCard.map((card) => {
           return (
             <>
-              <div className="menu-card">
+              <div className="menu-card" key={card.id}>
                 <div className="menu_card_Image">
                   <img
                     className="menu-card-img"
                     src={card.Img}
                     alt={card.name}
+                    style={{ width: "95px" }}
                   />
                 </div>
                 <div className="menu_card_text-Title">
