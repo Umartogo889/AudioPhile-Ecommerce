@@ -1,5 +1,6 @@
 // style
 import "../Home.css";
+import "../HomeResponsive.css";
 
 function Navbar() {
   return (
@@ -35,6 +36,7 @@ function Navbar() {
             </li>
           </ul>
           <svg
+            className="nav-icon"
             width="23px"
             height="20px"
             viewBox="0 0 24 24"

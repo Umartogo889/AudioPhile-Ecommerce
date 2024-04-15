@@ -6,17 +6,215 @@ lg: "1200px",
 xl: "1700px" */
 
 @media (max-width: 620px) {
-}
-
-@media (min-width: 620px) and (max-width: 768px) {
-}
-
-@media (min-width: 768px) and (max-width: 992px) {
+    .nav-container {
+        width: 90%;
+    }
     .nav-menu {
         display: block;
     }
     .nav-list {
         display: none;
+    }
+
+    /* hero main img  */
+
+    .hero_main_img__box {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        height: 700px;
+    }
+
+    .hero-main-img {
+        position: relative;
+        height: 600px;
+        right: 40px;
+    }
+    /* hero text block  */
+
+    .hero-text-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 95%;
+    }
+
+    .hero-text-title h1 {
+        line-height: 50px;
+        font-size: 38px;
+        letter-spacing: 2px;
+        width: 380px;
+        margin: 15px 0;
+    }
+
+    .hero-text-title p {
+        width: 340px;
+        color: #fafafa80;
+    }
+    .hero-text-title button {
+        border-radius: 0;
+        margin-top: 30px;
+        color: #fff;
+        background: var(--color-brown);
+        width: fit-content;
+        height: 40px;
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 700;
+        padding: 0 25px;
+    }
+
+    .new-product {
+        letter-spacing: 7px;
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 620px) and (max-width: 768px) {
+    .nav-container {
+        width: 90%;
+    }
+    .nav-menu {
+        display: block;
+    }
+    .nav-list {
+        display: none;
+    }
+    .nav-logo {
+        position: absolute;
+        left: 100px;
+    } /* hero main img  */
+
+    .hero_main_img__box {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        height: 900px;
+    }
+
+    .hero-main-img {
+        position: relative;
+        height: 900px;
+        right: 60px;
+    }
+    /* hero text block  */
+
+    .hero-text-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .hero-text-title h1 {
+        line-height: 70px;
+        font-size: 48px;
+        letter-spacing: 2px;
+        width: 380px;
+        margin: 20px 0;
+    }
+
+    .hero-text-title p {
+        width: 380px;
+        color: #fafafa80;
+    }
+    .hero-text-title button {
+        border-radius: 0;
+        margin-top: 30px;
+        color: #fff;
+        background: var(--color-brown);
+        width: fit-content;
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 700;
+        padding: 0 30px;
+    }
+
+    .new-product {
+        letter-spacing: 7px;
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .nav-container {
+        width: 90%;
+    }
+    .nav-menu {
+        display: block;
+    }
+    .nav-list {
+        display: none;
+    }
+    .nav-logo {
+        position: absolute;
+        left: 100px;
+    }
+    /* hero main img  */
+
+    .hero_main_img__box {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        height: 900px;
+    }
+
+    .hero-main-img {
+        position: relative;
+        height: 900px;
+        right: 50px;
+    }
+    /* hero text block  */
+
+    .hero-text-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .hero-text-title h1 {
+        line-height: 70px;
+        font-size: 48px;
+        letter-spacing: 2px;
+        width: 380px;
+        margin: 20px 0;
+    }
+
+    .hero-text-title p {
+        width: 380px;
+        color: #fafafa80;
+    }
+    .hero-text-title button {
+        border-radius: 0;
+        margin-top: 30px;
+        color: #fff;
+        background: var(--color-brown);
+        width: fit-content;
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 700;
+        padding: 0 30px;
+    }
+
+    .new-product {
+        letter-spacing: 7px;
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: 14px;
     }
 }
 @media (min-width: 992px) and (max-width: 1060px) {
@@ -24,21 +222,75 @@ xl: "1700px" */
         width: 90%;
     }
     .nav-menu {
-        display: none;
+        display: block;
     }
     .nav-list {
-        display: block;
+        display: none;
+    }
+    .nav-logo {
+        position: absolute;
+        left: 100px;
+    }
+    /* hero main img  */
+
+    .hero_main_img__box {
+        height: 729px;
+    }
+
+    .hero-main-img {
+        position: absolute;
+        height: 709px;
+        right: 30px;
+        width: 650px;
+        top: 0px;
+    }
+
+    /* hero text block  */
+
+    .hero-text-title {
+        position: absolute;
+        justify-content: right;
+        z-index: 111;
+        color: #fff;
+        left: 40px;
+        top: 33%;
+        width: 380px;
+        font-family: "Manrope";
+        margin-right: 50px;
+    }
+
+    .hero-text-title h1 {
+        line-height: 70px;
+        font-size: 48px;
+        letter-spacing: 2px;
+        margin: 20px 0;
+    }
+
+    .hero-text-title p {
+        color: #fafafa80;
+    }
+    .hero-text-title button {
+        border-radius: 0;
+        margin-top: 30px;
+        color: #fff;
+        background: var(--color-brown);
+        width: fit-content;
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 700;
+        padding: 0 30px;
+    }
+
+    .new-product {
+        letter-spacing: 7px;
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: 14px;
     }
 }
 @media (min-width: 1060px) and (max-width: 1200px) {
     .nav-container {
-        width: 915px;
-    }
-    .nav-menu {
-        display: none;
-    }
-    .nav-list {
-        display: block;
+        width: 95%;
     }
 }
 
