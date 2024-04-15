@@ -40,6 +40,7 @@ xl: "1700px" */
         align-items: center;
         text-align: center;
         width: 95%;
+        z-index: 1;
     }
 
     .hero-text-title h1 {
@@ -72,6 +73,46 @@ xl: "1700px" */
         margin-top: 0;
         margin-bottom: 10px;
         font-size: 13px;
+    }
+    /* headphones  */
+
+    .Zx9Speaker {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+    }
+    .Zx9Speaker-img {
+        background: url(./homeImg/featured-product-circles-bg.svg) no-repeat top;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-top: -150px;
+    }
+    .Zx9Speaker-img img {
+        width: 250px;
+        margin-top: 180px;
+    }
+    .Zx9Speaker_text_block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 50px;
+    }
+    .Zx9Speaker_text_block h1 {
+        width: 300px;
+        text-align: center;
+        color: #fff;
+        font-weight: 500;
+        line-height: 80px;
+        font-size: 40px;
+    }
+    .Zx9Speaker_text_block p {
+        width: 280px;
     }
 }
 
@@ -144,9 +185,60 @@ xl: "1700px" */
         margin-bottom: 20px;
         font-size: 14px;
     }
+    /* headphones  */
+
+    .Zx9Speaker {
+        position: relative;
+        width: 90%;
+        border-radius: 8px;
+        height: 850px;
+        background: var(--color-brown);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .Zx9Speaker-img {
+        position: absolute;
+        background: url(./homeImg/featured-product-circles-bg.svg) no-repeat top;
+        background-size: cover;
+        width: 100%;
+        top: -180px;
+        right: 0;
+        z-index: 1;
+    }
+    .Zx9Speaker-img img {
+        position: absolute;
+        top: 10px;
+        width: 350px;
+        height: 450px;
+        left: 25%;
+        top: 180px;
+    }
+    .Zx9Speaker_text_block {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        bottom: 50px;
+        left: 25%;
+    }
+    .Zx9Speaker_text_block h1 {
+        width: 300px;
+        text-align: center;
+        color: #fff;
+        font-weight: 500;
+        line-height: 80px;
+        font-size: 60px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
+    .showMenu {
+    }
     .nav-container {
         width: 90%;
     }
@@ -216,6 +308,55 @@ xl: "1700px" */
         margin-bottom: 20px;
         font-size: 14px;
     }
+    /* headphones  */
+
+    .Zx9Speaker {
+        position: relative;
+        width: 90%;
+        border-radius: 8px;
+        height: 850px;
+        background: var(--color-brown);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .Zx9Speaker-img {
+        position: relative;
+        background: url(./homeImg/featured-product-circles-bg.svg) no-repeat top;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        top: -180px;
+        z-index: 1;
+        justify-content: center;
+    }
+    .Zx9Speaker-img img {
+        position: absolute;
+        top: 10px;
+        width: 350px;
+        top: 180px;
+        left: 30%;
+    }
+    .Zx9Speaker_text_block {
+        position: absolute;
+        justify-content: center;
+        display: flex;
+        text-align: center;
+        left: 30%;
+        align-items: center;
+        flex-direction: column;
+        bottom: 90px;
+    }
+    .Zx9Speaker_text_block h1 {
+        width: 300px;
+        text-align: center;
+        color: #fff;
+        font-weight: 500;
+        line-height: 80px;
+        font-size: 60px;
+    }
 }
 @media (min-width: 992px) and (max-width: 1060px) {
     .nav-container {
@@ -250,7 +391,7 @@ xl: "1700px" */
     .hero-text-title {
         position: absolute;
         justify-content: right;
-        z-index: 111;
+        z-index: 1;
         color: #fff;
         left: 40px;
         top: 33%;
@@ -287,18 +428,111 @@ xl: "1700px" */
         margin-bottom: 20px;
         font-size: 14px;
     }
+    /* headphones  */
+
+    .Zx9Speaker {
+        position: relative;
+        width: 90%;
+        border-radius: 8px;
+        height: 550px;
+        background: var(--color-brown);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .Zx9Speaker-img {
+        position: absolute;
+        background: url(./homeImg/featured-product-circles-bg.svg) no-repeat top;
+        background-size: cover;
+        height: 100%;
+        width: 800px;
+        bottom: -35px;
+        left: -120px;
+    }
+    .Zx9Speaker-img img {
+        position: absolute;
+        width: 350px;
+        bottom: 10px;
+        left: 170px;
+    }
+    .Zx9Speaker_text_block {
+        position: absolute;
+        right: 70px;
+        width: 400px;
+    }
 }
 @media (min-width: 1060px) and (max-width: 1200px) {
     .nav-container {
         width: 95%;
     }
+    /* headphones  */
+
+    .Zx9Speaker {
+        position: relative;
+        width: 90%;
+        border-radius: 8px;
+        height: 550px;
+        background: var(--color-brown);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .Zx9Speaker-img {
+        position: absolute;
+        background: url(./homeImg/featured-product-circles-bg.svg) no-repeat top;
+        background-size: cover;
+        height: 115%;
+        width: 800px;
+        bottom: -35px;
+        left: -60px;
+    }
+    .Zx9Speaker-img img {
+        position: absolute;
+        width: 380px;
+        bottom: 10px;
+        left: 120px;
+    }
+    .Zx9Speaker_text_block {
+        position: absolute;
+        right: 100px;
+        width: 350px;
+    }
 }
 
 @media (min-width: 1200px) {
-    .nav-menu {
-        display: none;
+    /* headphones  */
+
+    .Zx9Speaker {
+        position: relative;
+        width: 1110px;
+        border-radius: 8px;
+        height: 550px;
+        background: var(--color-brown);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
     }
-    .nav-container {
-        max-width: 1110px;
+    .Zx9Speaker-img {
+        position: absolute;
+        background: url(./homeImg/featured-product-circles-bg.svg) no-repeat top;
+        background-size: cover;
+        height: 115%;
+        width: 800px;
+        bottom: -35px;
+        left: -60px;
+    }
+    .Zx9Speaker-img img {
+        position: absolute;
+        width: 400px;
+        bottom: 10px;
+        left: 120px;
+    }
+    .Zx9Speaker_text_block {
+        position: absolute;
+        right: 100px;
+        width: 350px;
     }
 }

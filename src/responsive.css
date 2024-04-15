@@ -5,39 +5,14 @@
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
-
 }
 @media (min-width: 992px) and (max-width: 1060px) {
-    .nav-container {
-        width: 95%;
-    }
-    .nav-menu {
-        display: none;
-    }
-    .nav-list {
-        display: block;
-    }
 }
 @media (min-width: 1060px) and (max-width: 1200px) {
-    .nav-container {
-        width: 95%x;
-    }
-    .nav-menu {
-        display: none;
-    }
-    .nav-list {
-        display: block;
-    }
 }
 
 @media (min-width: 1200px) {
     .all-items {
         max-width: 1550px;
-    }
-    .nav-menu {
-        display: none;
-    }
-    .nav-container {
-        max-width: 1110px;
     }
 }

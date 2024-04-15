@@ -1,3 +1,36 @@
+.topMenu {
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    left: 0;
+    top: 70px;
+    transform: translateY(-120%);
+    transition: all ease 0.9s;
+}
+.showMenu {
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    left: 0;
+    top: 70px;
+    transform: translateY(0%);
+    transition: all ease 0.9s;
+}
+.Rembg {
+    position: fixed;
+    width: 0%;
+    height: 0vh;
+}
+.backdrop-bg {
+    position: fixed;
+    top: 70px;
+    width: 100%;
+    height: 100vh;
+    background: #000000be;
+    z-index: 999;
+    left: 0;
+    user-select: none;
+}
 .Navbar {
     position: fixed;
     display: flex;
@@ -5,7 +38,7 @@
     justify-content: space-evenly;
     background: #101010;
     color: #fff;
-    z-index: 999;
+    z-index: 11;
     width: 100%;
 }
 .nav-container {
@@ -22,9 +55,12 @@
     display: flex;
     list-style: none;
     margin-right: 80px;
+    cursor: pointer;
 }
-
-.nav-link {
+.nav-menu {
+    display: none;
+}
+.list-item {
     font-family: "Manrope";
     font-size: 13px;
     color: #fff;
@@ -32,7 +68,8 @@
     font-weight: 700;
     margin-right: 35px;
 }
-.nav-link:hover {
+
+.list-item:hover {
     color: var(--color-brown);
 }
 .Navbar svg {
@@ -71,7 +108,7 @@
 .hero-text-title {
     position: absolute;
     justify-content: right;
-    z-index: 111;
+    z-index: 1;
     color: #fff;
     left: 20px;
     top: 33%;
@@ -112,4 +149,61 @@
     margin-top: 0;
     margin-bottom: 25px;
     font-size: 14px;
+}
+
+/* headphones  */
+
+.Zx9Speaker {
+    position: relative;
+    width: 90%;
+    border-radius: 8px;
+    height: 580px;
+    background: var(--color-brown);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.Zx9Speaker-img {
+    background: url(./homeImg/featured-product-circles-bg.svg) no-repeat top;
+    background-size: cover;
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.Zx9Speaker-img img {
+    width: 400px;
+    bottom: 10px;
+}
+.Zx9Speaker_text_block {
+    right: 150px;
+    width: 350px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.Zx9Speaker_text_block h1 {
+    width: 200px;
+    color: #fff;
+    font-weight: 500;
+    line-height: 80px;
+    font-size: 60px;
+}
+.Zx9Speaker_text_block p {
+    color: #fafafa80;
+    margin-top: 10px;
+    width: 350px;
+}
+.Zx9Speaker_text_block button {
+    border-radius: 0;
+    margin-top: 20px;
+    background: var(--color-grey-dark);
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+.Zx9Speaker_text_block button:hover {
+    background: #766969;
 }
