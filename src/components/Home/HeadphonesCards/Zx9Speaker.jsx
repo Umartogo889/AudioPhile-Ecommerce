@@ -6,7 +6,7 @@ function Zx9Speaker() {
     <div className="Container">
       <div className="Zx9Speaker">
         <div className="Zx9Speaker-img">
-          <img src={MainImg} alt="" />
+          <img src={MainImg} alt="category-img-speakers@2x.png" />
         </div>
         <div className="Zx9Speaker_text_block">
           <h1>ZX9 SPEAKER</h1>
