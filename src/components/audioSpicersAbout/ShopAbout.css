@@ -1,0 +1,235 @@
+.ShopAbout {
+    position: relative;
+    width: 1110px;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 350px;
+}
+.ShopAbout .ShopAboutImg {
+    right: 0;
+    position: absolute;
+    width: 460px;
+    height: 500px;
+    border-radius: 8px;
+    background: no-repeat url(../Home/homeImg/image-best-gear.eec6124f.jpg);
+    background-size: contain;
+}
+.ShopAbout_text_Title {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    margin: 30px;
+}
+.ShopAbout_text_Title h2 {
+    font-size: 43px;
+    width: 400px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.ShopAbout_text_Title h2 span {
+    color: var(--color-brown);
+}
+.ShopAbout_text_Title p {
+    width: 450px;
+    font-size: 16px;
+    color: #10101080;
+}
+@media (max-width: 460px) {
+    .ShopAbout {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 250px;
+    }
+    .ShopAbout .ShopAboutImg {
+        width: 100%;
+        height: 300px;
+        border-radius: 8px;
+        background: no-repeat url(../Home/homeImg/product-images-xx99-mark2-1-mobile.jpg);
+        background-size: contain;
+    }
+    .ShopAbout_text_Title {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 30px;
+        top: 120px;
+        left: auto;
+    }
+    .ShopAbout_text_Title h2 {
+        font-size: 25px;
+        width: 90%;
+        font-weight: 600;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    .ShopAbout_text_Title p {
+        width: 90%;
+        font-size: 14px;
+    }
+}
+@media (min-width: 460px) and (max-width: 620px) {
+    .ShopAbout {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 250px;
+    }
+    .ShopAbout .ShopAboutImg {
+        width: 100%;
+        height: 300px;
+        border-radius: 8px;
+        background: no-repeat url(../Home/homeImg/product-images-xx99-mark2-1-mobile.jpg);
+        background-size: cover;
+    }
+    .ShopAbout_text_Title {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 30px;
+        top: 120px;
+        left: auto;
+    }
+    .ShopAbout_text_Title h2 {
+        font-size: 30px;
+        width: 90%;
+        font-weight: 600;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+    .ShopAbout_text_Title p {
+        width: 90%;
+        font-size: 15px;
+    }
+}
+@media (min-width: 620px) and (max-width: 768px) {
+    .ShopAbout {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 250px;
+    }
+    .ShopAbout .ShopAboutImg {
+        width: 100%;
+        height: 300px;
+
+        border-radius: 8px;
+        background: no-repeat url(../Home/homeImg/image-best-gear.7c9818ee.jpg);
+        background-size: cover;
+    }
+    .ShopAbout_text_Title {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 30px;
+        top: 120px;
+        left: auto;
+    }
+    .ShopAbout_text_Title h2 {
+        font-size: 43px;
+        width: 90%;
+        font-weight: 600;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+    .ShopAbout_text_Title p {
+        width: 90%;
+        font-size: 17px;
+    }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    .ShopAbout {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 250px;
+    }
+    .ShopAbout .ShopAboutImg {
+        width: 100%;
+        height: 300px;
+
+        border-radius: 8px;
+        background: no-repeat url(../Home/homeImg/image-best-gear.7c9818ee.jpg);
+        background-size: cover;
+    }
+    .ShopAbout_text_Title {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 30px;
+        top: 120px;
+        left: auto;
+    }
+    .ShopAbout_text_Title h2 {
+        font-size: 43px;
+        width: 500px;
+        font-weight: 600;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+    .ShopAbout_text_Title p {
+        width: 600px;
+        font-size: 17px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1060px) {
+    .ShopAbout {
+        width: 90%;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        top: 50px;
+    }
+    .ShopAbout_text_Title {
+        width: 50%;
+        margin: 30px;
+    }
+    .ShopAbout_text_Title h2 {
+        font-size: 43px;
+        width: 400px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+    .ShopAbout_text_Title p {
+        width: 350px;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+}
+@media (min-width: 1060px) and (max-width: 1200px) {
+    .ShopAbout {
+        width: 90%;
+        display: flex;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+        top: 50px;
+    }
+}

@@ -17,7 +17,6 @@ function Navbar({
   function CloseMenu(e) {
     if (e.target.className === "backdrop-bg") {
       SetShowMenu(false);
-      console.log(e);
     }
   }
 
@@ -31,7 +30,9 @@ function Navbar({
             className={!ShowMenu ? "Rembg" : "backdrop-bg"}
           >
             <div className={ShowMenu ? "showMenu" : "topMenu"}>
-              <ProductsCard />
+              <div className="Product-card_scrool">
+                <ProductsCard />
+              </div>
             </div>
           </div>
 

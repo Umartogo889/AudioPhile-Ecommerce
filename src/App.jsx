@@ -8,9 +8,11 @@ import { useState } from "react";
 import HeaderHero from "./components/Home/HeaderHero/HeaderHero";
 import Navbar from "./components/Home/navbar/Navbar";
 import ProductsCard from "./components/Home/MenuCard/ProductsCard";
-import AudioSpeaker from "./components/Home/audioSpicersAbout/AudioSpeaker";
+import ShopAbout from "./components/audioSpicersAbout/ShopAbout";
 import Zx9Speaker from "./components/Home/HeadphonesCards/Zx9Speaker";
+import ZX7Speaker from "./components/Home/HeadphonesCards/ZX7Speaker";
 import Footer from "./components/Home/footer/Footer";
+import YX1Earphones from "./components/Home/HeadphonesCards/YX1Earphones";
 
 function App() {
   const [ShowHome, SetHomeShow] = useState(true);
@@ -54,21 +56,24 @@ function App() {
           ShowSpeakersCom={ShowSpeakersCom}
           ShowEarphonesCom={ShowEarphonesCom}
         />
-        <HeaderHero />
+        <HeaderHero>
+          <h1>Hello world</h1>
+        </HeaderHero>
         <div className="all-items">
           {ShowHome && (
             <div className="Home">
               <ProductsCard />
-              <AudioSpeaker />
               <Zx9Speaker />
+              <ZX7Speaker />
+              <YX1Earphones />
             </div>
           )}
           {ShowHeadphones && <div className="Headphones"></div>}
           {ShowSpeakers && <div className="Speakers"></div>}
           {ShowEarphones && <div className="Earphones"></div>}
-
-          <Footer />
+          <ShopAbout />
         </div>
+        <Footer />
       </div>
     </>
   );
