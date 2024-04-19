@@ -1,79 +1,34 @@
 // style
 import "./App.css";
 import "../src/responsive.css";
-// hooks
-import { useState } from "react";
+
+// react router dom
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 // Components
 import HeaderHero from "./components/Home/HeaderHero/HeaderHero";
 import Navbar from "./components/Home/navbar/Navbar";
-import ProductsCard from "./components/Home/MenuCard/ProductsCard";
 import ShopAbout from "./components/audioSpicersAbout/ShopAbout";
-import Zx9Speaker from "./components/Home/HeadphonesCards/Zx9Speaker";
-import ZX7Speaker from "./components/Home/HeadphonesCards/ZX7Speaker";
 import Footer from "./components/Home/footer/Footer";
-import YX1Earphones from "./components/Home/HeadphonesCards/YX1Earphones";
+import Home from "./components/Home/Home";
+import Headphone from "./components/HeadPhones/Headphone";
 
 function App() {
-  const [ShowHome, SetHomeShow] = useState(true);
-  const [ShowHeadphones, SetShowHeadphones] = useState(true);
-  const [ShowSpeakers, SetShowSpeakers] = useState(true);
-  const [ShowEarphones, SetShowEarphones] = useState(true);
-
-  function ShowHomeCom() {
-    SetHomeShow(true);
-    SetShowHeadphones(false);
-    SetShowSpeakers(false);
-    SetShowEarphones(false);
-  }
-
-  function ShowHeadphonesCom() {
-    SetHomeShow(false);
-    SetShowHeadphones(true);
-    SetShowSpeakers(false);
-    SetShowEarphones(false);
-  }
-
-  function ShowSpeakersCom() {
-    SetHomeShow(false);
-    SetShowHeadphones(false);
-    SetShowSpeakers(true);
-    SetShowEarphones(false);
-  }
-
-  function ShowEarphonesCom() {
-    SetHomeShow(false);
-    SetShowHeadphones(false);
-    SetShowSpeakers(false);
-    SetShowEarphones(true);
-  }
   return (
     <>
       <div className="Container">
-        <Navbar
-          ShowHomeCom={ShowHomeCom}
-          ShowHeadphonesCom={ShowHeadphonesCom}
-          ShowSpeakersCom={ShowSpeakersCom}
-          ShowEarphonesCom={ShowEarphonesCom}
-        />
-        <HeaderHero>
-          <h1>Hello world</h1>
-        </HeaderHero>
-        <div className="all-items">
-          {ShowHome && (
-            <div className="Home">
-              <ProductsCard />
-              <Zx9Speaker />
-              <ZX7Speaker />
-              <YX1Earphones />
-            </div>
-          )}
-          {ShowHeadphones && <div className="Headphones"></div>}
-          {ShowSpeakers && <div className="Speakers"></div>}
-          {ShowEarphones && <div className="Earphones"></div>}
-          <ShopAbout />
-        </div>
-        <Footer />
+        <HeaderHero />
+        <BrowserRouter>
+          <Navbar />
+          <div className="all-items">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/headphones" element={<Headphone />} />
+            </Routes>
+            <ShopAbout />
+          </div>
+          <Footer />
+        </BrowserRouter>
       </div>
     </>
   );

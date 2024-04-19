@@ -1,10 +1,15 @@
+.ProductsCard-Container {
+    width: 110%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .ProductsCard {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 10px;
     width: 70%;
-    padding: 150px 0;
-    overflow-y: scroll;
+    overflow-x: scroll;
 }
 .menu-card {
     position: relative;
@@ -14,6 +19,7 @@
     display: flex;
     justify-content: center;
     border-radius: 8px;
+    margin-bottom: -80px;
 }
 
 .menu_card_Image {
@@ -54,12 +60,10 @@
     .ProductsCard {
         display: grid;
         grid-template-rows: repeat(1, 1fr);
-        grid-gap: 80px;
+        grid-gap: 150px;
         width: 90%;
-        padding: 90px 0;
-        
+        padding: 130px 0;
     }
-    
 }
 
 @media (min-width: 768px) and (max-width: 992px) {

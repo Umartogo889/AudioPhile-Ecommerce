@@ -1,22 +1,26 @@
 // style
-
-import { useState } from "react";
 import "../Home.css";
 import "../HomeResponsive.css";
+// hooks
+import { useState } from "react";
+
+// react router dom
+import { Link } from "react-router-dom";
 
 // Component
 import ProductsCard from "../MenuCard/ProductsCard";
-function Navbar({
-  ShowHomeCom,
-  ShowHeadphonesCom,
-  ShowSpeakersCom,
-  ShowEarphonesCom,
-}) {
+
+function Navbar() {
   const [ShowMenu, SetShowMenu] = useState(false);
 
+  const [ShowChecOut, SetShowChecOut] = useState(false);
   function CloseMenu(e) {
-    if (e.target.className === "backdrop-bg") {
+    if (
+      e.target.className === "backdrop-bg" ||
+      e.taget.className === "showOut"
+    ) {
       SetShowMenu(false);
+      SetShowChecOut(false);
     }
   }
 
@@ -26,13 +30,40 @@ function Navbar({
         <div className="nav-container">
           <div
             onClick={CloseMenu}
-            onKeyDown={CloseMenu}
             className={!ShowMenu ? "Rembg" : "backdrop-bg"}
           >
             <div className={ShowMenu ? "showMenu" : "topMenu"}>
               <div className="Product-card_scrool">
-                <ProductsCard />
+                <ProductsCard SetShowMenu={SetShowMenu} />
               </div>
+            </div>
+          </div>
+
+          <div
+            onClick={CloseMenu}
+            className={
+              !ShowChecOut ? "Rembg" : "backdrop-bg , Container ,showOut"
+            }
+          >
+            <div className="ShowChecOut-container">
+              {ShowChecOut && (
+                <div className="ShowChecOut">
+                  <div className="ShowChecOut-textBlock">
+                    <div className="card-header">
+                      <h3>CART (0)</h3>
+                      <a href="#">Remove all</a>
+                    </div>
+                    <div className="card-list">
+                      <h1>no Rells</h1>
+                    </div>
+                    <div className="card-footer">
+                      <h3 style={{ color: "#10101080" }}>TOTAL</h3>
+                      <h3>$0</h3>
+                    </div>
+                    <button> CHEKOUT</button>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
 
@@ -46,20 +77,22 @@ function Navbar({
             <img src="./img/logo.svg" alt="" />
           </div>
           <ul className="nav-list">
-            <li className="list-item" onClick={ShowHomeCom}>
-              HOME
+            <li className="list-item">
+              <Link to="/">HOME</Link>
             </li>
-            <li className="list-item" onClick={ShowHeadphonesCom}>
-              HEADPHONES
+            <li className="list-item">
+              <Link to="/headphones">HEADPHONES</Link>
             </li>
-            <li className="list-item" onClick={ShowSpeakersCom}>
-              SPEAKERS
+            <li className="list-item">
+              <Link to="/speakers">SPEAKERS</Link>
             </li>
-            <li className="list-item" onClick={ShowEarphonesCom}>
-              EARPHONES
+            <li className="list-item">
+              <Link to="/earphones">EARPHONES</Link>
             </li>
           </ul>
+
           <svg
+            onClick={() => SetShowChecOut(ShowChecOut ? false : true)}
             className="nav-icon"
             width="23px"
             height="20px"

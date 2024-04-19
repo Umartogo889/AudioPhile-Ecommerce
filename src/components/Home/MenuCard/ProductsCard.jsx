@@ -1,25 +1,34 @@
 // style
 import "./ProductsCard.css";
 
+import { Link } from "react-router-dom";
+
 import { v4 as uuidv4 } from "uuid";
 
-function ProductsCard() {
+function ProductsCard({ SetShowMenu }) {
   const ProductsCard = [
     {
       Img: "./img/category-img-headphones.png",
       name: "HEADPHONES",
       id: uuidv4(),
+      adress: "/headphones",
     },
-    { Img: "./img/category-img-speakers.png", name: "SPEAKERS", id: uuidv4() },
+    {
+      Img: "./img/category-img-speakers.png",
+      name: "SPEAKERS",
+      id: uuidv4(),
+      adress: "/speakers",
+    },
     {
       Img: "./img/category-img-earphones.png",
       name: "EARPHONES",
       id: uuidv4(),
+      adress: "/earphones",
     },
   ];
 
   return (
-    <div className="Container">
+    <div className="ProductsCard-Container">
       <div className="ProductsCard">
         {ProductsCard.map((card) => {
           return (
@@ -34,10 +43,12 @@ function ProductsCard() {
                   />
                 </div>
                 <div className="menu_card_text-Title">
-                  <h3>{card.name}</h3>
-                  <p>
-                    SHOP <img src="./img/arrow-right-primary.svg" alt="" />
-                  </p>
+                  <Link to={card.adress} onClick={() => SetShowMenu(false)}>
+                    <h3>{card.name}</h3>
+                    <p>
+                      SHOP <img src="./img/arrow-right-primary.svg" alt="" />
+                    </p>
+                  </Link>
                 </div>
               </div>
             </>

@@ -1,0 +1,25 @@
+.smoll-hero {
+    width: 1110px;
+    height: 330px;
+    background: #101010;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.smoll-hero h2 {
+    margin-top: 60px;
+    font-size: 40px;
+    letter-spacing: 1px;
+    font-family: Manrope, sans-serif;
+    text-transform: uppercase;
+}
+@media (max-width: 768px) {
+    .smoll-hero {
+        height: 190px;
+    }
+    .smoll-hero h2 {
+        font-size: 35px;
+        margin-top: 80px;
+    }
+}

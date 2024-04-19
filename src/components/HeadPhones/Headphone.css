@@ -1,0 +1,64 @@
+.headphone {
+    width: 1110px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Category_Product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 130px;
+    margin-bottom: 150px;
+}
+
+.CategoryProduct_img {
+    width: 50%;
+    height: 555px;
+    background: var(--color-grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.CategoryProduct_img img {
+    width: 100%;
+}
+.CategoryProduct_text_block {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding-left: 120px;
+}
+.CategoryProduct_text_block h3 {
+    font-size: 40px;
+    width: 300px;
+    font-family: "Manrope";
+    letter-spacing: 1px;
+    margin: 30px 0px;
+}
+.CategoryProduct_text_block p {
+    color: #10101080;
+}
+.CategoryProduct_text_block button {
+    padding: 14px 25px;
+    font-size: 14px;
+    color: #fff;
+    margin: 20px 0;
+    border-radius: 0;
+    background: var(--color-brown);
+}
+.CategoryProduct_text_block button:hover {
+    background: #e5ac7d;
+}
+.false_p {
+    padding: 0 128px 0px 0px;
+}
+.false_b {
+    margin-bottom: 0;
+}

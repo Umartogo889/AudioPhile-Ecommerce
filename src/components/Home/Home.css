@@ -26,6 +26,7 @@
     top: 70px;
     width: 100%;
     height: 100vh;
+    display: flex;
     background: #000000be;
     z-index: 999;
     left: 0;
@@ -72,8 +73,14 @@
 .list-item:hover {
     color: var(--color-brown);
 }
+
+/* assets  */
+
 .Navbar svg {
     color: #fff;
+}
+.backdrop-bg .ShowChecOut-container {
+    width: 90%;
 }
 
 /* hero  */
@@ -348,4 +355,61 @@
 }
 .footer-icons a {
     cursor: pointer;
+}
+
+.ShowChecOut {
+    margin-left: auto;
+    margin-top: -150px;
+    width: 380px;
+    height: 530px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+}
+.ShowChecOut-textBlock {
+    width: 90%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #000;
+}
+.card-header {
+    width: 100%;
+    margin: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-content: end;
+    height: 50px;
+    font-weight: 500;
+}
+.card-header a {
+    text-decoration: underline;
+    color: #10101080;
+    font-size: 15px;
+}
+.card-list {
+    height: 300px;
+    width: 110%;
+    overflow-x: scroll;
+    color: #fff;
+}
+.card-footer {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    margin: 15px 20px;
+    
+}
+.ShowChecOut button {
+    color: #fff;
+    margin-left: 15px;
+    border-radius: 0;
+    background: var(--color-brown);
+    width: 100%;
+    margin-top: 10px;
+    letter-spacing: 0.5px;
+}
+.ShowChecOut button:hover {
+    background: #e0b095;
 }

@@ -1,6 +1,15 @@
 // style
 import "../Home.css";
 import "../HomeResponsive.css";
+import "./HeaderHero.css";
+// react router dom
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+// components
+import HeaderHome from "../HeaderHero/HeaderHome";
+import HeaderSpeakers from "../HeaderHero/HeaderSpeakers";
+import HeaderEarphones from "./HeaderEarphones";
+import HeaderHeadphones from "./HeaderHeadphones";
 
 function HeaderHero() {
   return (
@@ -8,19 +17,14 @@ function HeaderHero() {
       {
         <div className="hero">
           <div className="hero-container">
-            <div className="hero-text-title">
-              <p className="new-product">NEW PRODUCT</p>
-              <h1>XX99 MARK II HEADPHONES</h1>
-              <p>
-                Experience natural, lifelike audio and exceptional build quality
-                made for the passionate music enthusiast.
-              </p>
-              <button>SEE PRODUCT</button>
-            </div>
-
-            <div className="hero_main_img__box">
-              <img className="hero-main-img" src="./img/hero-img.png" alt="" />
-            </div>
+            <BrowserRouter>
+              <Routes>
+                <Route path="/" element={<HeaderHome />} />
+                <Route path="/headphones" element={<HeaderHeadphones />} />
+                <Route path="/speakers" element={<HeaderSpeakers />} />
+                <Route path="/earphones" element={<HeaderEarphones />} />
+              </Routes>
+            </BrowserRouter>
           </div>
         </div>
       }

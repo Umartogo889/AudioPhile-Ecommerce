@@ -1,0 +1,96 @@
+@media (max-width: 430px) {
+    .headphone {
+        width: 97%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .Category_Product {
+        display: flex;
+        flex-direction: column;
+        width: 97%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .CategoryProduct_text_block {
+        padding: 0;
+        text-align: center;
+        width: 100%;
+        align-items: center;
+    }
+    .CategoryProduct_text_block h3 {
+        font-size: 28px;
+        width: 100%;
+    }
+
+    .CategoryProduct_img {
+        width: 100%;
+    }
+    .CategoryProduct_img img {
+        width: 320px;
+        height: 330px;
+    }
+    .revorse {
+        flex-direction: column-reverse;
+    }
+}
+@media (max-width: 620px) {
+    .headphone {
+        width: 90%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .Category_Product {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .CategoryProduct_img {
+        width: 100%;
+        height: 330px;
+    }
+}
+@media (min-width: 620px) and (max-width: 768px) {
+    .headphone {
+        width: 90%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .Category_Product {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .CategoryProduct_img {
+        width: 100%;
+    }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    .headphone {
+        width: 90%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .Category_Product {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .CategoryProduct_img {
+        width: 100%;
+    }
+}
+@media (min-width: 992px) and (max-width: 1060px) {
+}
+@media (min-width: 1060px) and (max-width: 1200px) {
+}
+@media (min-width: 1200px) {
+}
