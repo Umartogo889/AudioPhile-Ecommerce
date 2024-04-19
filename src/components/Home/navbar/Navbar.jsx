@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 import ProductsCard from "../MenuCard/ProductsCard";
 
 // img hamburger
+import Logo from "../homeImg/logo.svg";
 import HamburgerIcon from "../homeImg/icon-hamburger-menu.svg";
 
 function Navbar() {
@@ -77,7 +78,7 @@ function Navbar() {
             <img src={HamburgerIcon} alt="" />
           </div>
           <div className="nav-logo">
-            <img src="./img/logo.svg" alt="" />
+            <img src={Logo} alt="" />
           </div>
           <ul className="nav-list">
             <li className="list-item">
