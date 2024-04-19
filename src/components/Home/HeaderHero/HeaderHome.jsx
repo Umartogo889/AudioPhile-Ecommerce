@@ -1,5 +1,9 @@
 import "../Home.css";
 import "../HomeResponsive.css";
+
+// main img
+import MainImg from "../homeImg/hero-img.png";
+
 function HeaderHome() {
   return (
     <>
@@ -14,7 +18,7 @@ function HeaderHome() {
       </div>
 
       <div className="hero_main_img__box">
-        <img className="hero-main-img" src="./img/hero-img.png" alt="" />
+        <img className="hero-main-img" src={MainImg} alt="" />
       </div>
     </>
   );

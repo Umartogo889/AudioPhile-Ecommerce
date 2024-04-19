@@ -10,6 +10,9 @@ import { Link } from "react-router-dom";
 // Component
 import ProductsCard from "../MenuCard/ProductsCard";
 
+// img hamburger
+import HamburgerIcon from "../homeImg/icon-hamburger-menu.svg";
+
 function Navbar() {
   const [ShowMenu, SetShowMenu] = useState(false);
 
@@ -71,7 +74,7 @@ function Navbar() {
             className="nav-menu"
             onClick={() => SetShowMenu(ShowMenu ? false : true)}
           >
-            <img src="./img/icon-hamburger-menu.svg" alt="" />
+            <img src={HamburgerIcon} alt="" />
           </div>
           <div className="nav-logo">
             <img src="./img/logo.svg" alt="" />
