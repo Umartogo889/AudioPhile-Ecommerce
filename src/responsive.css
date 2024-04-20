@@ -1,10 +1,19 @@
 @media (max-width: 620px) {
+    .new-product {
+        padding-top: 30px;
+    }
 }
 
 @media (min-width: 620px) and (max-width: 768px) {
+    .new-product {
+        padding-top: 30px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
+    .new-product {
+        padding-top: 30px;
+    }
 }
 @media (min-width: 992px) and (max-width: 1060px) {
 }

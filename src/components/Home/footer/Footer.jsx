@@ -1,5 +1,9 @@
 import "../Home.css";
 import "../HomeResponsive.css";
+
+// react router dom
+import { Link } from "react-router-dom";
+
 // photos
 import logo from "../homeImg/logo.svg";
 import instagramIcon from "../homeImg/icon-instagram.svg";
@@ -14,10 +18,18 @@ function Footer() {
         <section className="footer-section">
           <img src={logo} alt="" />
           <ul className="footer-nav-list">
-            <li className="footer-list-item">HOME</li>
-            <li className="footer-list-item">HEADPHONES</li>
-            <li className="footer-list-item">SPEAKERS</li>
-            <li className="footer-list-item">EARPHONES</li>
+            <li className="footer-list-item">
+              <Link to="/">HOME</Link>
+            </li>
+            <li className="footer-list-item">
+              <Link to="/headphones">HEADPHONES</Link>
+            </li>
+            <li className="footer-list-item">
+              <Link to="/speakers">SPEAKERS</Link>
+            </li>
+            <li className="footer-list-item">
+              <Link to="/earphones">EARPHONES</Link>
+            </li>
           </ul>
         </section>
         <p className="footer-paragraph">

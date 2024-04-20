@@ -70,10 +70,14 @@
     margin-right: 35px;
 }
 
-.list-item:hover {
+.nav-link {
+    color: #fff;
+    font-weight: 700;
+    transition: ease 0.5s;
+}
+.nav-link:hover {
     color: var(--color-brown);
 }
-
 /* assets  */
 
 .Navbar svg {
@@ -327,11 +331,12 @@
     font-weight: 500;
     list-style: none;
 }
-.footer-section ul li {
+.footer-section ul a {
     cursor: pointer;
+    color: #fff;
     transition: color 0.5s;
 }
-.footer-section ul li:hover {
+.footer-section ul a:hover {
     color: var(--color-brown);
 }
 .footer-paragraph {
@@ -399,7 +404,6 @@
     align-content: center;
     justify-content: space-between;
     margin: 15px 20px;
-    
 }
 .ShowChecOut button {
     color: #fff;

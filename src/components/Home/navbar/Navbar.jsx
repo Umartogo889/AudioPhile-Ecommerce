@@ -37,9 +37,7 @@ function Navbar() {
             className={!ShowMenu ? "Rembg" : "backdrop-bg"}
           >
             <div className={ShowMenu ? "showMenu" : "topMenu"}>
-              <div className="Product-card_scrool">
-                <ProductsCard SetShowMenu={SetShowMenu} />
-              </div>
+              <ProductsCard SetShowMenu={SetShowMenu} />
             </div>
           </div>
 
@@ -82,16 +80,24 @@ function Navbar() {
           </div>
           <ul className="nav-list">
             <li className="list-item">
-              <Link to="/">HOME</Link>
+              <Link className="nav-link" to="/">
+                HOME
+              </Link>
             </li>
             <li className="list-item">
-              <Link to="/headphones">HEADPHONES</Link>
+              <Link className="nav-link" to="/headphones">
+                HEADPHONES
+              </Link>
             </li>
             <li className="list-item">
-              <Link to="/speakers">SPEAKERS</Link>
+              <Link className="nav-link" to="/speakers">
+                SPEAKERS
+              </Link>
             </li>
             <li className="list-item">
-              <Link to="/earphones">EARPHONES</Link>
+              <Link className="nav-link" to="/earphones">
+                EARPHONES
+              </Link>
             </li>
           </ul>
 

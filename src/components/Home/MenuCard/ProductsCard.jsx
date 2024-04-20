@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 import { v4 as uuidv4 } from "uuid";
 
-
 function ProductsCard({ SetShowMenu }) {
   const ProductsCard = [
     {
@@ -29,6 +28,7 @@ function ProductsCard({ SetShowMenu }) {
   ];
 
   return (
+    
     <div className="ProductsCard-Container">
       <div className="ProductsCard">
         {ProductsCard.map((card) => {

@@ -14,6 +14,17 @@ xl: "1700px" */
         border-radius: 8px;
         padding: 20px;
     }
+    .hero-text-title {
+        position: absolute;
+        justify-content: right;
+        z-index: 1;
+        color: #fff;
+        left: 40px;
+        top: 33%;
+        width: 90%;
+        font-family: "Manrope";
+        margin-right: 50px;
+    }
 }
 
 @media (max-width: 620px) {
@@ -727,6 +738,17 @@ xl: "1700px" */
 @media (min-width: 1060px) and (max-width: 1200px) {
     .nav-container {
         width: 95%;
+    }
+    .hero-text-title {
+        position: absolute;
+        justify-content: right;
+        z-index: 1;
+        color: #fff;
+        left: 40px;
+        top: 33%;
+        width: 380px;
+        font-family: "Manrope";
+        margin-right: 50px;
     }
     /* headphones  */
 

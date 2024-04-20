@@ -11,6 +11,12 @@ function XX992Headphone() {
         <img src={MainImg} alt="" />
       </div>
       <div className="CategoryProduct_text_block">
+        <p
+          style={{ color: "var(--color-brown)", marginBottom: "0px" }}
+          className="new-product"
+        >
+          NEW PRODUCT
+        </p>
         <h3>XX99 MARK II HEADPHONES</h3>
         <p>
           The new XX99 Mark II headphones is the pinnacle of pristine audio. It

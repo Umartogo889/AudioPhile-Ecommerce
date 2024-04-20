@@ -1,11 +1,10 @@
+import "../HeaderHero/HeaderHero.css";
 import "../HomeResponsive.css";
 
 function HeaderSpeakers() {
   return (
-    <div className="Container">
-      <div className="smoll-hero">
-        <h2>Speakers</h2>
-      </div>
+    <div className="smoll-hero" id="smoll-hero">
+      <h2>speakers</h2>
     </div>
   );
 }
