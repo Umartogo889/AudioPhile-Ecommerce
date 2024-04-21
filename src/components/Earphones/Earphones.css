@@ -52,15 +52,16 @@
 .CategoryProduct_text_block p {
     color: #10101080;
 }
-.CategoryProduct_text_block button {
+.CategoryProduct_text_block a {
     padding: 14px 25px;
     font-size: 14px;
     color: #fff;
     margin: 20px 0;
     border-radius: 0;
+    transition: 0.2s;
     background: var(--color-brown);
 }
-.CategoryProduct_text_block button:hover {
+.CategoryProduct_text_block a:hover {
     background: #e5ac7d;
 }
 

@@ -6,7 +6,6 @@ function ShopAbout() {
   return (
     <div className="Container">
       <div className="ShopAbout">
-        <div className="ShopAboutImg"></div>
         <div className="ShopAbout_text_Title">
           <h2>
             BRINGING YOU THE <span> BEST</span> AUDIO GEAR
@@ -19,6 +18,9 @@ function ShopAbout() {
             products. Stop by our store to meet some of the fantastic people who
             make Audiophile the best place to buy your portable audio equipment.
           </p>
+        </div>
+        <div className="ShopAboutImg">
+          <img src={Photo} alt="" />
         </div>
       </div>
     </div>

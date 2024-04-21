@@ -14,8 +14,10 @@ import Home from "./components/Home/Home";
 import Headphone from "./components/HeadPhones/Headphone";
 import Speakers from "./components/Speakers/Speakers";
 import Earphones from "./components/Earphones/Earphones";
+import ProductCardInfo from "./components/ProductCardInfo/ProductCardInfo";
 
 function App() {
+  
   return (
     <>
       <div className="Container">
@@ -23,10 +25,11 @@ function App() {
           <Navbar />
           <div className="all-items">
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route index element={<Home />} />
               <Route path="/headphones" element={<Headphone />} />
               <Route path="/speakers" element={<Speakers />} />
               <Route path="/earphones" element={<Earphones />} />
+              <Route path="cardInfo" element={<ProductCardInfo />} />
             </Routes>
             <ShopAbout />
           </div>
