@@ -113,6 +113,7 @@ xl: "1700px" */
         align-items: center;
         width: 90%;
         height: 600px;
+        margin-top: 50px;
     }
     .Zx9Speaker-img {
         background: url(./homeImg/featured-product-circles-bg.svg) no-repeat top;
