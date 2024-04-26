@@ -19,6 +19,7 @@ import ProductCardInfoZX7 from "./components/ProductCardInfo/ProductInfoSpeakerZ
 import ProductCardInfoYX1 from "./components/ProductCardInfo/ProductInfoSpeakerYX1/ProductInfoYX1";
 import ProductCardInfoXX59 from "./components/ProductCardInfo/productCardInfoSectionsXX59/ProductCardInfoXX59";
 import ProductCardInfoXX99 from "./components/ProductCardInfo/ProductInfoSpeakerXX99/ProductInfoXX99";
+import ProductCardInfoXX992 from "./components/ProductCardInfo/ProductInfoSpeakerXX992/ProductInfoXX992";
 function App() {
   return (
     <>
@@ -50,6 +51,10 @@ function App() {
               <Route
                 path="/cardInfo-xx99-headphones"
                 element={<ProductCardInfoXX99 />}
+              />{" "}
+              <Route
+                path="/cardInfo-xx992-headphones"
+                element={<ProductCardInfoXX992 />}
               />
             </Routes>
             <ShopAbout />

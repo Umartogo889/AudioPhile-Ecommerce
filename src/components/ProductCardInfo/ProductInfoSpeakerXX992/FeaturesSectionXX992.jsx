@@ -28,6 +28,10 @@ function FeaturesSectionZX7({ productCardInfo }) {
                     <h5>1X</h5>
                     <p>{cardInfo.includes[4]}</p>
                   </li>
+                  <li>
+                    <h5>1X</h5>
+                    <p>{cardInfo.includes[5]}</p>
+                  </li>
                 </ul>
               </div>
             </div>

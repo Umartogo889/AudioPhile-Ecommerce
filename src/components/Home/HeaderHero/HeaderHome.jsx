@@ -2,7 +2,10 @@ import "../Home.css";
 import "../HomeResponsive.css";
 
 // main img
-import MainImg from "../homeImg/hero-img.png";
+import MainImg from "../homeImg/image-hero.ea96bda7.png";
+
+// react router dom
+import { Link } from "react-router-dom";
 
 function HeaderHome() {
   return (
@@ -16,7 +19,7 @@ function HeaderHome() {
               Experience natural, lifelike audio and exceptional build quality
               made for the passionate music enthusiast.
             </p>
-            <button>SEE PRODUCT</button>
+            <Link to={"/cardInfo-xx992-headphones"}>SEE PRODUCT</Link>
           </div>
 
           <div className="hero_main_img__box">

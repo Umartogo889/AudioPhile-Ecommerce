@@ -1,5 +1,5 @@
 import { useState } from "react";
-import mainImg from "../CardProductInfoImg/image-category-page-preview-xx99.jpg";
+import mainImg from "../CardProductInfoImg/image-category-page-preview-xx992.jpg";
 
 function CardInfoZX7({ productCardInfo }) {
   const [titleQuantity, SetQuantity] = useState(0);

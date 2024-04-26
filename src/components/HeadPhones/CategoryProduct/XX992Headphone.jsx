@@ -1,4 +1,5 @@
 // style
+import { Link } from "react-router-dom";
 import "../Headphone.css";
 
 // main img
@@ -23,7 +24,7 @@ function XX992Headphone() {
           redefines your premium headphone experience by reproducing the
           balanced depth and precision of studio-quality sound
         </p>
-        <button>SEE PRODUCT</button>
+        <Link to={"/cardInfo-xx992-headphones"}>SEE PRODUCT</Link>
       </div>
     </div>
   );

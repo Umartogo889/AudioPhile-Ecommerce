@@ -142,7 +142,7 @@
 .hero-text-title p {
     color: #fafafa80;
 }
-.hero-text-title button {
+.hero-text-title a {
     border-radius: 0;
     margin-top: 45px;
     color: #fff;
@@ -156,7 +156,7 @@
     font-weight: 700;
     padding: 0 1.875rem;
 }
-.hero-text-title button:hover {
+.hero-text-title a:hover {
     background-color: #e7aa87;
 }
 .new-product {
