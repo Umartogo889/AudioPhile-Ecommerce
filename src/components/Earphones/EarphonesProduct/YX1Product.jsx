@@ -27,7 +27,7 @@ function YX1Product() {
           new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even
           in noisy environments with its active noise cancellation feature.
         </p>
-        <Link to={"/cardInfo"}>SEE PRODUCT</Link>
+        <Link to={"/cardInfo-zx1-speaker"}>SEE PRODUCT</Link>
       </div>
     </div>
   );

@@ -1,4 +1,6 @@
 import MainImg from "../speakersImg/image-category-page-preview-Z7X.jpg";
+//  react router dom
+import { Link } from "react-router-dom";
 function Z7XProduct() {
   return (
     <div className="Category_Product">
@@ -12,7 +14,7 @@ function Z7XProduct() {
           speaker uses high-end audiophile components that represents the top of
           the line powered speakers for home or studio use.
         </p>
-        <button>SEE PRODUCT</button>
+        <Link to={"/cardInfo-zx7-speaker"}>SEE PRODUCT</Link>
       </div>
     </div>
   );

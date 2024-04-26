@@ -14,7 +14,9 @@ import Home from "./components/Home/Home";
 import Headphone from "./components/HeadPhones/Headphone";
 import Speakers from "./components/Speakers/Speakers";
 import Earphones from "./components/Earphones/Earphones";
-import ProductCardInfoZX9 from "./components/ProductCardInfo/productCardInfoSections/ProductCardInfoZX9";
+import ProductCardInfoZX9 from "./components/ProductCardInfo/productCardInfoSectionsZX9/ProductCardInfoZX9";
+import ProductCardInfoZX7 from "./components/ProductCardInfo/ProductInfoSpeakerZX7/ProductInfoZX7";
+import ProductCardInfoYX1 from "./components/ProductCardInfo/ProductInfoSpeakerYX1/ProductInfoYX1";
 
 function App() {
   return (
@@ -31,6 +33,14 @@ function App() {
               <Route
                 path="/cardInfo-zx9-speaker"
                 element={<ProductCardInfoZX9 />}
+              />
+              <Route
+                path="/cardInfo-zx7-speaker"
+                element={<ProductCardInfoZX7 />}
+              />
+              <Route
+                path="/cardInfo-zx1-speaker"
+                element={<ProductCardInfoYX1 />}
               />
             </Routes>
             <ShopAbout />

@@ -3,6 +3,8 @@ import "../SpeakersResponsive.css";
 // site img
 import MainImg from "../speakersImg/image-category-page-preview-ZX9.jpg";
 
+//  react router dom
+import { Link } from "react-router-dom";
 function ZX9Product() {
   return (
     <div className="Category_Product_revorse ">
@@ -19,7 +21,7 @@ function ZX9Product() {
           detailed and accurate audio reproduction for audiophiles, mixing
           engineers, and music aficionados alike in studios and on the go.
         </p>
-        <button>SEE PRODUCT</button>
+        <Link to={"/cardInfo-zx9-speaker"}>SEE PRODUCT</Link>
       </div>
       <div className="CategoryProduct_img">
         <img src={MainImg} alt="" />

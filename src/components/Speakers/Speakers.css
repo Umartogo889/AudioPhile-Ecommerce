@@ -52,15 +52,17 @@
 .CategoryProduct_text_block p {
     color: #10101080;
 }
-.CategoryProduct_text_block button {
+.CategoryProduct_text_block a {
+    font-family: "Manrope";
     padding: 14px 25px;
-    font-size: 14px;
+    font-size: 15px;
     color: #fff;
     margin: 20px 0;
     border-radius: 0;
     background: var(--color-brown);
+    font-weight: 500;
 }
-.CategoryProduct_text_block button:hover {
+.CategoryProduct_text_block a:hover {
     background: #e5ac7d;
 }
 
