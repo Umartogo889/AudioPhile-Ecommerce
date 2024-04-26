@@ -24,8 +24,9 @@
     justify-content: center;
     align-items: center;
 }
-.product-img .img-Zx9 {
-    width: 350px;
+.product-img .img-Zx9,
+.XX59-img {
+    width: 400px;
 }
 .product-info-text {
     width: 50%;
@@ -40,7 +41,7 @@
     font-size: 38px;
     margin-top: -20px;
     margin-bottom: 30px;
-    width: 300px;
+    width: 380px;
 }
 
 .product-info-text p {

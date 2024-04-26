@@ -10,7 +10,7 @@ function YX1Earphones() {
         <img src={MainImg} alt="" />
         <div className="YX1EarphonesInf">
           <h2>YX1 EARPHONES</h2>
-          <Link to={"/cardInfo-yx1-speaker"}>
+          <Link to={"/cardInfo-zx1-earphones"}>
             <button>SEE PRODUCT</button>
           </Link>
         </div>

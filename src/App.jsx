@@ -17,7 +17,8 @@ import Earphones from "./components/Earphones/Earphones";
 import ProductCardInfoZX9 from "./components/ProductCardInfo/productCardInfoSectionsZX9/ProductCardInfoZX9";
 import ProductCardInfoZX7 from "./components/ProductCardInfo/ProductInfoSpeakerZX7/ProductInfoZX7";
 import ProductCardInfoYX1 from "./components/ProductCardInfo/ProductInfoSpeakerYX1/ProductInfoYX1";
-
+import ProductCardInfoXX59 from "./components/ProductCardInfo/productCardInfoSectionsXX59/ProductCardInfoXX59";
+import ProductCardInfoXX99 from "./components/ProductCardInfo/ProductInfoSpeakerXX99/ProductInfoXX99";
 function App() {
   return (
     <>
@@ -39,8 +40,16 @@ function App() {
                 element={<ProductCardInfoZX7 />}
               />
               <Route
-                path="/cardInfo-zx1-speaker"
+                path="/cardInfo-zx1-earphones"
                 element={<ProductCardInfoYX1 />}
+              />
+              <Route
+                path="/cardInfo-xx59-headphones"
+                element={<ProductCardInfoXX59 />}
+              />
+              <Route
+                path="/cardInfo-xx99-headphones"
+                element={<ProductCardInfoXX99 />}
               />
             </Routes>
             <ShopAbout />
