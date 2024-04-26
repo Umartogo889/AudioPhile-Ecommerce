@@ -1,16 +1,17 @@
 // style
-import "./ProductCardInfo.css";
+import "../ProductCardInfo.css";
 // hooks
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-// components
-import CardInfo from "./productCardInfoSections/CardInfo";
-import FeaturesSection from "./productCardInfoSections/FeaturesSection";
-import ProductsCard from "../Home/MenuCard/ProductsCard";
-import GaleryInfoCard from "./productCardInfoSections/GaleryInfoCard";
-import RandomCategoryProduct from "./productCardInfoSections/RandomCategoryProduct";
 
-function ProductCardInfo() {
+// react router dom
+
+// components
+import CardInfo from "./CardInfo";
+import FeaturesSection from "./FeaturesSection";
+import ProductsCard from "../../Home/MenuCard/ProductsCard";
+
+function ProductCardInfoZX9() {
   const [productCardInfo, SetProductCardInfo] = useState([
     {
       id: uuidv4(),
@@ -42,12 +43,10 @@ function ProductCardInfo() {
       <div className="ProductCardInfo-container">
         <CardInfo productCardInfo={productCardInfo} />
         <FeaturesSection productCardInfo={productCardInfo} />
-        <GaleryInfoCard productCardInfo={productCardInfo} />
-        <RandomCategoryProduct />
         <ProductsCard />
       </div>
     </div>
   );
 }
 
-export default ProductCardInfo;
+export default ProductCardInfoZX9;

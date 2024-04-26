@@ -14,10 +14,9 @@ import Home from "./components/Home/Home";
 import Headphone from "./components/HeadPhones/Headphone";
 import Speakers from "./components/Speakers/Speakers";
 import Earphones from "./components/Earphones/Earphones";
-import ProductCardInfo from "./components/ProductCardInfo/ProductCardInfo";
+import ProductCardInfoZX9 from "./components/ProductCardInfo/productCardInfoSections/ProductCardInfoZX9";
 
 function App() {
-  
   return (
     <>
       <div className="Container">
@@ -29,7 +28,10 @@ function App() {
               <Route path="/headphones" element={<Headphone />} />
               <Route path="/speakers" element={<Speakers />} />
               <Route path="/earphones" element={<Earphones />} />
-              <Route path="cardInfo" element={<ProductCardInfo />} />
+              <Route
+                path="/cardInfo-zx9-speaker"
+                element={<ProductCardInfoZX9 />}
+              />
             </Routes>
             <ShopAbout />
           </div>

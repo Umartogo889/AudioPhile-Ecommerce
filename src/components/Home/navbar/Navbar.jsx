@@ -5,7 +5,7 @@ import "../HomeResponsive.css";
 import { useState } from "react";
 
 // react router dom
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 // Component
 import ProductsCard from "../MenuCard/ProductsCard";
@@ -18,13 +18,14 @@ function Navbar() {
   const [ShowMenu, SetShowMenu] = useState(false);
 
   const [ShowChecOut, SetShowChecOut] = useState(false);
+
   function CloseMenu(e) {
     if (
       e.target.className === "backdrop-bg" ||
-      e.taget.className === "showOut"
+      e.taget.className === "ShowChecOut-container"
     ) {
       SetShowMenu(false);
-      SetShowChecOut(false);
+      SetShowChecOut(true);
     }
   }
 
@@ -80,24 +81,24 @@ function Navbar() {
           </div>
           <ul className="nav-list">
             <li className="list-item">
-              <Link className="nav-link" to="/">
+              <NavLink className="nav-link" to="/">
                 HOME
-              </Link>
+              </NavLink>
             </li>
             <li className="list-item">
-              <Link className="nav-link" to="/headphones">
+              <NavLink className="nav-link" to="/headphones">
                 HEADPHONES
-              </Link>
+              </NavLink>
             </li>
             <li className="list-item">
-              <Link className="nav-link" to="/speakers">
+              <NavLink className="nav-link" to="/speakers">
                 SPEAKERS
-              </Link>
+              </NavLink>
             </li>
             <li className="list-item">
-              <Link className="nav-link" to="/earphones">
+              <NavLink className="nav-link" to="/earphones">
                 EARPHONES
-              </Link>
+              </NavLink>
             </li>
           </ul>
 

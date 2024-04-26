@@ -8,3 +8,225 @@
     margin-top: 120px;
     width: 1110px;
 }
+.Product-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+    margin-top: 80px;
+}
+.product-img {
+    width: 45%;
+    height: 500px;
+    background: var(--color-grey);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product-info-text {
+    width: 50%;
+}
+.new-product {
+    font-family: "Manrope";
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.product-info-text h2 {
+    font-family: "Manrope";
+    font-size: 38px;
+    margin-top: -10px;
+    margin-bottom: 35px;
+}
+
+.product-info-text p {
+    font-family: "Manrope";
+    color: #10101080;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+.product-info-text .product-price {
+    font-size: 19px;
+    font-weight: 600;
+}
+.product-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+.quantity-section {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #201f1f80;
+    background: var(--color-grey);
+    user-select: none;
+}
+.quantity-section h3 {
+    font-size: 14px;
+    color: #000;
+}
+.quantity-section .quantity-button {
+    background: transparent;
+}
+.product-card-info-main-btn {
+    background: var(--color-brown);
+    border-radius: 0;
+    color: #fff;
+    padding: 10px 25px;
+}
+
+.features-section {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    margin-top: 100px;
+}
+.features-text {
+    width: 70%;
+    font-family: "Manrope";
+}
+.features-text p {
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+.features-text h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 30px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+.includes-section {
+    width: 30%;
+    margin-left: 100px;
+}
+.includes-section h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 28px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.includes-section ul li {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 10px;
+    color: #10101080;
+}
+.includes-section ul li h5 {
+    color: var(--color-brown);
+    font-size: 15px;
+    margin-top: 3px;
+    font-weight: 500;
+}
+
+@media (max-width: 620px) {
+    .ProductCardInfo-container {
+        width: 97%;
+    }
+    .Product-info {
+        flex-direction: column;
+    }
+    .product-info-text {
+        margin-top: -80px;
+        width: 90%;
+    }
+    .product-img {
+        width: 90%;
+    }
+    .product-img img {
+        width: 230px;
+    }
+    .features-section {
+        position: relative;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .features-text {
+        width: 90%;
+    }
+    .includes-section {
+        width: 100%;
+    }
+}
+@media (min-width: 620px) and (max-width: 768px) {
+    .ProductCardInfo-container {
+        width: 97%;
+    }
+    .Product-info {
+        flex-direction: column;
+    }
+    .product-info-text {
+        margin-top: -80px;
+        width: 80%;
+    }
+    .product-img {
+        width: 90%;
+    }
+    .product-img img {
+        width: 230px;
+    }
+    .features-section {
+        position: relative;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .features-text {
+        width: 90%;
+    }
+    .includes-section {
+        width: 100%;
+    }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    .ProductCardInfo-container {
+        width: 97%;
+    }
+    .Product-info {
+        flex-direction: column;
+    }
+    .product-info-text {
+        margin-top: -80px;
+        width: 70%;
+    }
+    .product-img {
+        width: 90%;
+    }
+    .product-img img {
+        width: 270px;
+    }
+    .features-section {
+        position: relative;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .features-text {
+        width: 90%;
+    }
+    .includes-section {
+        width: 100%;
+    }
+}
+@media (min-width: 992px) and (max-width: 1060px) {
+    .ProductCardInfo-container {
+        width: 97%;
+    }
+}
+@media (min-width: 1060px) and (max-width: 1200px) {
+    .ProductCardInfo-container {
+        width: 97%;
+    }
+}
+@media (min-width: 1200px) {
+}
