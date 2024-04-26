@@ -47,7 +47,7 @@ function ProductsCard({ SetShowMenu }) {
                   <Link to={card.adress} onClick={() => SetShowMenu(false)}>
                     <h3>{card.name}</h3>
                     <p>
-                      SHOP <img src="./img/arrow-right-primary.svg" alt="" />
+                      SHOP <img src="./img/icon-arrow-right.08d4cd77.svg" alt="" />
                     </p>
                   </Link>
                 </div>
