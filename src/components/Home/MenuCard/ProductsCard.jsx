@@ -8,19 +8,19 @@ import { v4 as uuidv4 } from "uuid";
 function ProductsCard({ SetShowMenu }) {
   const ProductsCard = [
     {
-      Img: "menuImg/category-img-headphones.png",
+      Img: "./menuImg/category-img-headphones.png",
       name: "HEADPHONES",
       id: uuidv4(),
       adress: "/headphones",
     },
     {
-      Img: "./menuImg/category-img-speakers.png",
+      Img: "./img/category-img-speakers.png",
       name: "SPEAKERS",
       id: uuidv4(),
       adress: "/speakers",
     },
     {
-      Img: "./menuImg/category-img-earphones.png",
+      Img: "./img/category-img-earphones.png",
       name: "EARPHONES",
       id: uuidv4(),
       adress: "/earphones",
@@ -37,9 +37,10 @@ function ProductsCard({ SetShowMenu }) {
                 <div className="menu_card_Image">
                   <img
                     className="menu-card-img"
-                    src={card.Img}
+                    src={`"${card.Img}"`}
                     alt={card.name}
                     style={{ width: "95px" }}
+                    key={card.id}
                   />
                 </div>
                 <div className="menu_card_text-Title">
@@ -47,7 +48,7 @@ function ProductsCard({ SetShowMenu }) {
                     <h3>{card.name}</h3>
                     <p>
                       SHOP{" "}
-                      <img src="./img/icon-arrow-right.08d4cd77.svg" alt="" />
+                      <img src="./menuImg/icon-arrow-right.08d4cd77.svg" alt="" />
                     </p>
                   </Link>
                 </div>
