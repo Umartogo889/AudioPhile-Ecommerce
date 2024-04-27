@@ -59,10 +59,6 @@
     box-sizing: border-box;
 }
 
-body,
-html {
-    overflow-x: hidden;
-}
 .no-scroll {
     overflow: hidden;
 }

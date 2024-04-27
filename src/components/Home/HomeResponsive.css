@@ -33,7 +33,7 @@ xl: "1700px" */
 @media (max-width: 620px) {
     .Product-card_scrool {
         overflow-x: scroll;
-        height: 100vh;
+        height: 90vh;
     }
     .nav-container {
         width: 90%;

@@ -16,16 +16,18 @@ import HamburgerIcon from "../homeImg/icon-hamburger-menu.svg";
 
 function Navbar() {
   const [ShowMenu, SetShowMenu] = useState(false);
-
   const [ShowChecOut, SetShowChecOut] = useState(false);
 
+  if (ShowChecOut || ShowMenu) {
+    document.body.classList.add("no-scroll");
+  } else {
+    document.body.classList.remove("no-scroll");
+  }
+
   function CloseMenu(e) {
-    if (
-      e.target.className === "backdrop-bg" ||
-      e.taget.className === "ShowChecOut-container"
-    ) {
+    if (e.target.className === "backdrop-bg") {
       SetShowMenu(false);
-      SetShowChecOut(true);
+      SetShowChecOut(false);
     }
   }
 
@@ -38,7 +40,9 @@ function Navbar() {
             className={!ShowMenu ? "Rembg" : "backdrop-bg"}
           >
             <div className={ShowMenu ? "showMenu" : "topMenu"}>
-              <ProductsCard SetShowMenu={SetShowMenu} />
+              <div className="Product-card_scrool">
+                <ProductsCard SetShowMenu={SetShowMenu} />
+              </div>
             </div>
           </div>
 
