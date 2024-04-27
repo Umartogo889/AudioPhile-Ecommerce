@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 
 import { v4 as uuidv4 } from "uuid";
 
+// photo
+import rightIcon from "./menuImg/icon-arrow-right.08d4cd77.svg";
 function ProductsCard({ SetShowMenu }) {
   const ProductsCard = [
     {
@@ -47,8 +49,8 @@ function ProductsCard({ SetShowMenu }) {
                   <Link to={card.adress} onClick={() => SetShowMenu(false)}>
                     <h3>{card.name}</h3>
                     <p>
-                      SHOP{" "}
-                      <img src="./menuImg/icon-arrow-right.08d4cd77.svg" alt="" />
+                      SHOP
+                      <img src={rightIcon} alt="" />
                     </p>
                   </Link>
                 </div>
