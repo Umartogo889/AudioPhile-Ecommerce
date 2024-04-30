@@ -2,6 +2,9 @@
 import "./App.css";
 import "../src/responsive.css";
 
+// hooks
+import { useState, useEffect } from "react";
+
 // react router dom
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
@@ -20,9 +23,44 @@ import ProductCardInfoYX1 from "./components/ProductCardInfo/ProductInfoSpeakerY
 import ProductCardInfoXX59 from "./components/ProductCardInfo/productCardInfoSectionsXX59/ProductCardInfoXX59";
 import ProductCardInfoXX99 from "./components/ProductCardInfo/ProductInfoSpeakerXX99/ProductInfoXX99";
 import ProductCardInfoXX992 from "./components/ProductCardInfo/ProductInfoSpeakerXX992/ProductInfoXX992";
+import Checkout from "./components/checkout/Checkout";
+
 function App() {
+  const [OrdersBasket, SetOrdersBasket] = useState([]);
+
+  // register order cilient
+  const getItem = JSON.parse(localStorage.getItem("card"));
+
+  function cardInfo(card, id) {
+    SetOrdersBasket((prev) => {
+      return [...prev, card];
+    });
+
+    const filterCard = getItem.filter((element) => {
+      return element.id !== id;
+    });
+
+    console.log(filterCard);
+
+    localStorage.setItem("card", JSON.stringify(OrdersBasket));
+  }
+
+  // loader
+  const [openLoader, SetopenLoader] = useState(false);
+
+  setTimeout(() => {
+    SetopenLoader(false);
+  }, 1700);
+
+  // main section
   return (
     <>
+      {openLoader && (
+        <div className="loader-container">
+          <div className="loader"></div>
+        </div>
+      )}
+
       <div className="Container">
         <BrowserRouter>
           <Navbar />
@@ -34,11 +72,11 @@ function App() {
               <Route path="/earphones" element={<Earphones />} />
               <Route
                 path="/cardInfo-zx9-speaker"
-                element={<ProductCardInfoZX9 />}
+                element={<ProductCardInfoZX9 cardInfo={cardInfo} />}
               />
               <Route
                 path="/cardInfo-zx7-speaker"
-                element={<ProductCardInfoZX7 />}
+                element={<ProductCardInfoZX7 cardInfo={cardInfo} />}
               />
               <Route
                 path="/cardInfo-zx1-earphones"
@@ -51,11 +89,12 @@ function App() {
               <Route
                 path="/cardInfo-xx99-headphones"
                 element={<ProductCardInfoXX99 />}
-              />{" "}
+              />
               <Route
                 path="/cardInfo-xx992-headphones"
                 element={<ProductCardInfoXX992 />}
               />
+              <Route path="/checkout-section" element={<Checkout />} />
             </Routes>
             <ShopAbout />
           </div>

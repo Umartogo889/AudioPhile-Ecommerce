@@ -3,8 +3,7 @@ import "../Headphone.css";
 // main img
 import MainImg from "../HeadPhoneImg/image-category-page-preview.jpg";
 
-// react router dom
-import { Link } from "react-router-dom";
+
 
 function XX59Headphones() {
   return (
@@ -19,7 +18,7 @@ function XX59Headphones() {
           tastes with the XX59 headphones. The stylish yet durable versatile
           wireless headset is a brilliant companion at home or on the move.
         </p>
-        <Link to={"/cardInfo-xx59-headphones"}>SEE PRODUCT</Link>
+        <a href={"/cardInfo-xx59-headphones"}>SEE PRODUCT</a>
       </div>
     </div>
   );

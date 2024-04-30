@@ -11,12 +11,12 @@ import CardInfo from "./CardInfoZX7";
 import FeaturesSection from "./FeaturesSectionZX7";
 import ProductsCard from "../../Home/MenuCard/ProductsCard";
 
-function ProductCardInfoZX7() {
+function ProductCardInfoZX7({ cardInfo }) {
   const [productCardInfo, SetProductCardInfo] = useState([
     {
       id: uuidv4(),
       mainImg: "../CardProductInfoImg/category-img-speakers@2x.png",
-      name: "ZX9 SPEAKER",
+      name: "ZX7 SPEAKER",
       title:
         "Stream high quality sound wirelessly with minimal to no loss. The ZX7 speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.",
       Cash: 3500,
@@ -37,10 +37,32 @@ function ProductCardInfoZX7() {
     },
   ]);
 
+  const [PurchaseAmount, SetPurchaseAmount] = useState(1);
+
+  function productPrice() {
+    productCardInfo.map((productInfo) => {
+      let obj = {
+        id: 1,
+        1: {
+          img: productInfo.mainImg,
+          name: productInfo.name,
+          total: PurchaseAmount,
+        },
+        price: productInfo.Cash * PurchaseAmount,
+      };
+      cardInfo(obj);
+    });
+  }
+
   return (
     <div className="ProductCardInfo">
       <div className="ProductCardInfo-container">
-        <CardInfo productCardInfo={productCardInfo} />
+        <CardInfo
+          productPrice={productPrice}
+          productCardInfo={productCardInfo}
+          SetPurchaseAmount={SetPurchaseAmount}
+          PurchaseAmount={PurchaseAmount}
+        />
         <FeaturesSection productCardInfo={productCardInfo} />
         <ProductsCard />
       </div>

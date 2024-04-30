@@ -215,15 +215,16 @@
 .Zx9Speaker_text_block a {
     position: relative;
     border-radius: 0;
-    top: 20px;
+    top: 30px;
     background: var(--color-grey-dark);
     color: #fff;
     font-weight: 400;
     letter-spacing: 1px;
-    padding: 10px 15px;
+    padding: 12px 18px;
+    transition: 0.3s ease;
 }
 .Zx9Speaker_text_block a:hover {
-    background: #766969;
+    background: rgba(100, 99, 99, 0.557);
 }
 /* ZX7Speaker */
 
@@ -414,7 +415,7 @@
     justify-content: space-between;
     margin: 15px 20px;
 }
-.ShowChecOut button {
+.ShowChecOut .btn-chekout {
     color: #fff;
     margin-left: 15px;
     border-radius: 0;
@@ -422,9 +423,12 @@
     width: 100%;
     margin-top: 10px;
     letter-spacing: 0.5px;
+    padding: 12px;
+    text-align: center;
+    font-size: 15px;
 }
-.ShowChecOut button:hover {
-    background: #e0b095;
+.ShowChecOut .btn-chekout:hover {
+    background: #e7a681;
 }
 .ShowChecOut a:hover {
     color: var(--color-brown);

@@ -4,9 +4,6 @@ import "../HomeResponsive.css";
 // hooks
 import { useState } from "react";
 
-// react router dom
-import { NavLink } from "react-router-dom";
-
 // Component
 import ProductsCard from "../MenuCard/ProductsCard";
 
@@ -67,7 +64,7 @@ function Navbar() {
                       <h3 style={{ color: "#10101080" }}>TOTAL</h3>
                       <h3>$0</h3>
                     </div>
-                    <button> CHEKOUT</button>
+                    <a className="btn-chekout" href="/checkout-section"> CHEKOUT</a>
                   </div>
                 </div>
               )}
@@ -85,24 +82,24 @@ function Navbar() {
           </div>
           <ul className="nav-list">
             <li className="list-item">
-              <NavLink className="nav-link" to="/">
+              <a className="nav-link" href="/">
                 HOME
-              </NavLink>
+              </a>
             </li>
             <li className="list-item">
-              <NavLink className="nav-link" to="/headphones">
+              <a className="nav-link" href="/headphones">
                 HEADPHONES
-              </NavLink>
+              </a>
             </li>
             <li className="list-item">
-              <NavLink className="nav-link" to="/speakers">
+              <a className="nav-link" href="/speakers">
                 SPEAKERS
-              </NavLink>
+              </a>
             </li>
             <li className="list-item">
-              <NavLink className="nav-link" to="/earphones">
+              <a className="nav-link" href="/earphones">
                 EARPHONES
-              </NavLink>
+              </a>
             </li>
           </ul>
 

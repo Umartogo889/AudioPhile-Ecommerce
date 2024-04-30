@@ -11,7 +11,7 @@ import CardInfo from "./CardInfo";
 import FeaturesSection from "./FeaturesSection";
 import ProductsCard from "../../Home/MenuCard/ProductsCard";
 
-function ProductCardInfoZX9() {
+function ProductCardInfoZX9({ cardInfo }) {
   const [productCardInfo, SetProductCardInfo] = useState([
     {
       id: uuidv4(),
@@ -38,10 +38,32 @@ function ProductCardInfoZX9() {
     },
   ]);
 
+  const [PurchaseAmount, SetPurchaseAmount] = useState(1);
+
+  function productPrice() {
+    productCardInfo.map((productInfo) => {
+      let obj = {
+        id: 1,
+        1: {
+          img: productInfo.mainImg,
+          name: productInfo.name,
+          total: PurchaseAmount,
+        },
+        price: productInfo.Cash * PurchaseAmount,
+      };
+      cardInfo(obj, 1);
+    });
+  }
+
   return (
     <div className="ProductCardInfo">
       <div className="ProductCardInfo-container">
-        <CardInfo productCardInfo={productCardInfo} />
+        <CardInfo
+          productCardInfo={productCardInfo}
+          PurchaseAmount={PurchaseAmount}
+          productPrice={productPrice}
+          SetPurchaseAmount={SetPurchaseAmount}
+        />
         <FeaturesSection productCardInfo={productCardInfo} />
         <ProductsCard />
       </div>

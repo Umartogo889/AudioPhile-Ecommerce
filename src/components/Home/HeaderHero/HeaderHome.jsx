@@ -4,9 +4,6 @@ import "../HomeResponsive.css";
 // main img
 import MainImg from "../homeImg/image-hero.ea96bda7.png";
 
-// react router dom
-import { Link } from "react-router-dom";
-
 function HeaderHome() {
   return (
     <>
@@ -19,7 +16,7 @@ function HeaderHome() {
               Experience natural, lifelike audio and exceptional build quality
               made for the passionate music enthusiast.
             </p>
-            <Link to={"/cardInfo-xx992-headphones"}>SEE PRODUCT</Link>
+            <a href={"/cardInfo-xx992-headphones"}>SEE PRODUCT</a>
           </div>
 
           <div className="hero_main_img__box">

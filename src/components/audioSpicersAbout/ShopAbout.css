@@ -203,7 +203,7 @@
         gap: 20px;
         justify-content: center;
         align-items: center;
-        top: 50px;
+        margin-top: 50px;
     }
     .ShopAbout_text_Title {
         width: 50%;

@@ -10,7 +10,7 @@ import rightIcon from "./menuImg/icon-arrow-right.08d4cd77.svg";
 function ProductsCard({ SetShowMenu }) {
   const ProductsCard = [
     {
-      Img: "./menuImg/category-img-headphones.png",
+      Img: "./img/category-img-headphones.png",
       name: "HEADPHONES",
       id: uuidv4(),
       adress: "/headphones",
@@ -35,11 +35,11 @@ function ProductsCard({ SetShowMenu }) {
         {ProductsCard.map((card) => {
           return (
             <>
-              <div className="menu-card" key={card.id}>
+              <div className="menu-card" key={card.name}>
                 <div className="menu_card_Image">
                   <img
                     className="menu-card-img"
-                    src={`"${card.Img}"`}
+                    src={card.Img}
                     alt={card.name}
                     style={{ width: "95px" }}
                     key={card.id}

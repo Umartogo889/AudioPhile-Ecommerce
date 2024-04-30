@@ -1,17 +1,12 @@
 import { useState } from "react";
 import mainImg from "../CardProductInfoImg/category-img-speakers@2x.png";
 
-function CardInfo({ productCardInfo }) {
-  const [titleQuantity, SetQuantity] = useState(0);
-  const [prise, Setprise] = useState(0);
-  const [PurchaseAmount, SetPurchaseAmount] = useState(1);
-
-  function productPrice(ProductCash) {
-    let reqPrice = prise * PurchaseAmount;
-    Setprise(ProductCash);
-    SetQuantity(reqPrice);
-    SetPurchaseAmount(1);
-  }
+function CardInfo({
+  productCardInfo,
+  SetPurchaseAmount,
+  PurchaseAmount,
+  productPrice,
+}) {
   return (
     <>
       {productCardInfo.map((cardInfo) => {
@@ -64,8 +59,8 @@ function CardInfo({ productCardInfo }) {
                     </button>
                   </div>
                   <button
+                    onClick={productPrice}
                     type="button"
-                    onClick={() => productPrice(cardInfo.Cash)}
                     onChange={(e) => {
                       e.target.value;
                     }}

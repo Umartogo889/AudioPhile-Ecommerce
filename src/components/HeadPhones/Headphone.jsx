@@ -9,7 +9,11 @@ import XX99Headphones from "./CategoryProduct/XX99Headphones";
 import XX992Headphone from "./CategoryProduct/XX992Headphone";
 import HeaderHeadphones from "../Home/HeaderHero/HeaderHeadphones";
 
-function Headphone() {
+function Headphone({ SetopenLoader }) {
+  setTimeout(() => {
+    SetopenLoader(false);
+  }, 2500);
+
   return (
     <div className="Container">
       <HeaderHeadphones />
