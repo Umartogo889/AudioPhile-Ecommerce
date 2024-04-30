@@ -3,7 +3,6 @@
     display: flex;
     justify-content: center;
     background: var(--color-grey);
-    height: 1500px;
 }
 .main-container {
     max-width: 1200px;
@@ -16,7 +15,7 @@
     padding: 30px 28px;
     border-radius: 0.5rem;
     background: #fff;
-    width: 1000px;
+    width: 900px;
     height: 1000px;
 }
 .billing__details {
@@ -40,10 +39,12 @@
 .checkout-wrapper form label {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 .checkout-wrapper form label span {
     color: #000;
     font-weight: 500;
+    margin-left: 5px;
 }
 .checkout-wrapper form input,
 .form-input-element {
@@ -144,6 +145,8 @@
 .checkout-product-title {
     font-weight: 500;
     font-size: 25px;
+    margin-left: 10px;
+    margin-top: 10px;
 }
 
 .checkout-product-prices-item {
@@ -162,7 +165,8 @@
 .checkout-product-container {
     color: #10101080;
     font-size: 17px;
-    height: 160px;
+    height: 150px;
+    margin-left: 10px;
 }
 .card-order-title {
     padding-top: 20px;
@@ -180,4 +184,120 @@
     border-radius: 0;
     color: #fff;
     background: var(--color-brown);
+}
+
+@media (max-width: 620px) {
+    .main-container {
+        width: 97%;
+        flex-direction: column;
+        margin-top: 150px;
+    }
+    .checkout-product {
+        width: 97%;
+        height: 440px;
+        padding: 10px 10px;
+        background: #fff;
+        border-radius: 8px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .checkout-wrapper {
+        padding: 30px 14px;
+        border-radius: 0.5rem;
+        background: #fff;
+        width: 97%;
+        height: 1500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .billing__details__form {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .shipping__info__form {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .Checkout__text {
+        font-size: 30px;
+    }
+    .form-details-inputs {
+        flex-direction: column;
+    }
+    .radio-input-container {
+        width: 100%;
+    }
+}
+
+@media (min-width: 620px) and (max-width: 768px) {
+    .main-container {
+        width: 97%;
+        flex-direction: column;
+        margin-top: 150px;
+    }
+    .checkout-product {
+        width: 97%;
+        height: 440px;
+        padding: 10px 10px;
+        background: #fff;
+        border-radius: 8px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .checkout-wrapper {
+        padding: 30px 28px;
+        border-radius: 0.5rem;
+        background: #fff;
+        width: 97%;
+        height: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .checkout-button {
+        width: 95%;
+        margin-left: 20px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .main-container {
+        width: 97%;
+        flex-direction: column;
+        margin-top: 150px;
+    }
+    .checkout-product {
+        width: 97%;
+        height: 440px;
+        padding: 10px 10px;
+        background: #fff;
+        border-radius: 8px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .checkout-wrapper {
+        padding: 30px 28px;
+        border-radius: 0.5rem;
+        background: #fff;
+        width: 97%;
+        height: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .checkout-button {
+        width: 95%;
+        margin-left: 20px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1060px) {
+    .main-container {
+        width: 97%;
+    }
+}
+@media (min-width: 1060px) and (max-width: 1200px) {
+    .main-container {
+        width: 97%;
+    }
+}
+
+@media (min-width: 1200px) {
 }

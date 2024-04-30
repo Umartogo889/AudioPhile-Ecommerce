@@ -46,7 +46,7 @@ function App() {
   }
 
   // loader
-  const [openLoader, SetopenLoader] = useState(false);
+  const [openLoader, SetopenLoader] = useState(true);
 
   setTimeout(() => {
     SetopenLoader(false);

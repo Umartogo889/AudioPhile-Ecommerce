@@ -2,6 +2,7 @@ import "./Checkout.css";
 
 // photo
 import cashImg from "../checkout/img/icon-cash-payment.svg";
+// hooks
 import { useState } from "react";
 
 function Checkout() {
