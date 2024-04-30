@@ -57,14 +57,15 @@ function Navbar() {
                       <h3>CART (0)</h3>
                       <a href="#">Remove all</a>
                     </div>
-                    <div className="card-list">
-                      <h1>no Rells</h1>
-                    </div>
+                    <div className="card-list"></div>
                     <div className="card-footer">
                       <h3 style={{ color: "#10101080" }}>TOTAL</h3>
                       <h3>$0</h3>
                     </div>
-                    <a className="btn-chekout" href="/checkout-section"> CHEKOUT</a>
+                    <a className="btn-chekout" href="/checkout-section">
+                      {" "}
+                      CHEKOUT
+                    </a>
                   </div>
                 </div>
               )}
