@@ -1,6 +1,7 @@
 // style;
 import "./ShopAbout.css";
-import Photo from "../Home/homeImg/image-best-gear.eec6124f.jpg";
+
+import Photo from "../homeImg/image-best-gear.eec6124f.jpg";
 
 function ShopAbout() {
   return (

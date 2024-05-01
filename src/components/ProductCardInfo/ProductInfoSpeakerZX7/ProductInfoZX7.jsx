@@ -4,15 +4,13 @@ import "../ProductCardInfo.css";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
-// react router dom
-
 // components
 import CardInfo from "./CardInfoZX7";
 import FeaturesSection from "./FeaturesSectionZX7";
-import ProductsCard from "../../Home/MenuCard/ProductsCard";
+import ProductsCard from "../../MenuCard/ProductsCard";
 
 function ProductCardInfoZX7({ cardInfo }) {
-  const [productCardInfo, SetProductCardInfo] = useState([
+  const productCardInfo = [
     {
       id: uuidv4(),
       mainImg: "../CardProductInfoImg/category-img-speakers@2x.png",
@@ -35,7 +33,7 @@ function ProductCardInfoZX7({ cardInfo }) {
         3: "./CardProductInfoImg/image-gallery-yx9-3.jpg",
       },
     },
-  ]);
+  ];
 
   const [PurchaseAmount, SetPurchaseAmount] = useState(1);
 
