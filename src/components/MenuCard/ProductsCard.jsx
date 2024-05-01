@@ -3,61 +3,70 @@ import "./ProductsCard.css";
 
 import { Link } from "react-router-dom";
 
-import { v4 as uuidv4 } from "uuid";
-
 // photo
 import rightIcon from "./menuImg/icon-arrow-right.08d4cd77.svg";
-function ProductsCard({ SetShowMenu }) {
-  const ProductsCard = [
-    {
-      Img: "./img/category-img-headphones.png",
-      name: "HEADPHONES",
-      id: uuidv4(),
-      adress: "/headphones",
-    },
-    {
-      Img: "./img/category-img-speakers.png",
-      name: "SPEAKERS",
-      id: uuidv4(),
-      adress: "/speakers",
-    },
-    {
-      Img: "./img/category-img-earphones.png",
-      name: "EARPHONES",
-      id: uuidv4(),
-      adress: "/earphones",
-    },
-  ];
+import img1 from "./menuImg/1.png";
+import img2 from "./menuImg/2.png";
+import img3 from "./menuImg/3.png";
 
+function ProductsCard({ SetShowMenu }) {
   return (
     <div className="ProductsCard-Container">
       <div className="ProductsCard">
-        {ProductsCard.map((card) => {
-          return (
-            <>
-              <div className="menu-card" key={card.name}>
-                <div className="menu_card_Image">
-                  <img
-                    className="menu-card-img"
-                    src={card.Img}
-                    alt={card.name}
-                    style={{ width: "95px" }}
-                    key={card.id}
-                  />
-                </div>
-                <div className="menu_card_text-Title">
-                  <Link to={card.adress} onClick={() => SetShowMenu(false)}>
-                    <h3>{card.name}</h3>
-                    <p>
-                      SHOP
-                      <img src={rightIcon} alt="" />
-                    </p>
-                  </Link>
-                </div>
-              </div>
-            </>
-          );
-        })}
+        <div className="menu-card">
+          <div className="menu_card_Image">
+            <img
+              className="menu-card-img"
+              src={img2}
+              style={{ width: "95px" }}
+            />
+          </div>
+          <div className="menu_card_text-Title">
+            <Link to="/headphones" onClick={() => SetShowMenu(false)}>
+              <h3>HEADPHONES</h3>
+              <p>
+                SHOP
+                <img src={rightIcon} alt="" />
+              </p>
+            </Link>
+          </div>
+        </div>
+        <div className="menu-card">
+          <div className="menu_card_Image">
+            <img
+              className="menu-card-img"
+              src={img3}
+              style={{ width: "95px" }}
+            />
+          </div>
+          <div className="menu_card_text-Title">
+            <Link to="/speakers" onClick={() => SetShowMenu(false)}>
+              <h3>SPEAKERS</h3>
+              <p>
+                SHOP
+                <img src={rightIcon} alt="" />
+              </p>
+            </Link>
+          </div>
+        </div>
+        <div className="menu-card">
+          <div className="menu_card_Image">
+            <img
+              className="menu-card-img"
+              src={img1}
+              style={{ width: "95px" }}
+            />
+          </div>
+          <div className="menu_card_text-Title">
+            <Link to="/earphones" onClick={() => SetShowMenu(false)}>
+              <h3>EARPHONES</h3>
+              <p>
+                SHOP
+                <img src={rightIcon} alt="" />
+              </p>
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );

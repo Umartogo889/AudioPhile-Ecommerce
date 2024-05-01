@@ -1,7 +1,3 @@
-// style
-import "./App.css";
-import "../src/responsive.css";
-
 // hooks
 import { useState } from "react";
 
@@ -9,7 +5,6 @@ import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 // Components
-
 import Navbar from "./components/Navbar/Navbar";
 import ShopAbout from "./components/AudioSpicersAbout/ShopAbout";
 import Footer from "./components/Footer/Footer";
