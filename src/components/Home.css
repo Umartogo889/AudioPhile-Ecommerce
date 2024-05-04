@@ -106,6 +106,7 @@
     position: relative;
     display: flex;
     width: 1110px;
+    margin-top: -40px;
 }
 
 /* hero main img  */
@@ -265,7 +266,7 @@
 
 .YX1Earphones-container {
     width: 100%;
-    max-width: 1190px;
+    max-width: 1110px;
     margin-top: 50px;
     margin-bottom: 100px;
     display: flex;
@@ -377,10 +378,10 @@
     margin-left: auto;
     margin-top: -150px;
     width: 380px;
-    height: 530px;
+    height: 500px;
     background: #fff;
     border-radius: 8px;
-    padding: 20px;
+    padding: 20px 1px 0px 15px;
 }
 .ShowChecOut-textBlock {
     width: 90%;
@@ -406,8 +407,8 @@
     font-size: 15px;
 }
 .card-list {
-    height: 300px;
-    width: 110%;
+    height: 260px;
+    width: 105%;
     overflow-x: scroll;
     color: #fff;
 }
@@ -415,7 +416,8 @@
     display: flex;
     align-content: center;
     justify-content: space-between;
-    margin: 15px 20px;
+    margin: 15px 0px;
+    margin-left: 20px;
 }
 .ShowChecOut .btn-chekout {
     color: #fff;
@@ -435,4 +437,42 @@
 .ShowChecOut a:hover {
     color: var(--color-brown);
     transition: 0.3s;
+}
+.card-list ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin-top: -20px;
+    height: 100%;
+}
+.text-default {
+    color: #10101080;
+}
+.card-list ul .cardlist {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.card-list ul .cardlist .product-list-info {
+    display: flex;
+    padding: 0px 5px;
+}
+.list-text-block {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 15px;
+    font-weight: 500;
+}
+.list-text-block h4 {
+    color: #000;
+    text-align: start;
+    margin-left: 3px;
+    font-weight: 700;
+}
+.product-list-info .cardlist__img {
+    width: 65px;
 }

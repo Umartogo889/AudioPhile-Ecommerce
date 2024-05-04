@@ -6,6 +6,7 @@ import HeaderSpeakers from "../components//HeaderHero/HeaderSpeakers";
 import ProductsCard from "../components/MenuCard/ProductsCard";
 import Z7XProduct from "../components/Speakers/SpeakersProduct/Z7XProduct";
 import ZX9Product from "../components/Speakers/SpeakersProduct/ZX9Product";
+import ShopAbout from "../components/AudioSpicersAbout/ShopAbout";
 
 function Speakers() {
   return (
@@ -15,6 +16,7 @@ function Speakers() {
         <Z7XProduct />
         <ZX9Product />
         <ProductsCard />
+        <ShopAbout />
       </div>
     </div>
   );

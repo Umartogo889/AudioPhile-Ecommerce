@@ -6,6 +6,7 @@ import "../components/Earphones/EarphonesResponsive.css";
 import HeaderEarphones from "../components/HeaderHero/HeaderEarphones";
 import ProductsCard from "../components/MenuCard/ProductsCard";
 import YX1Product from "../components/Earphones/EarphonesProduct/YX1Product";
+import ShopAbout from "../components/AudioSpicersAbout/ShopAbout";
 
 function Earphones() {
   return (
@@ -14,6 +15,7 @@ function Earphones() {
       <div className="Earphones">
         <YX1Product />
         <ProductsCard />
+        <ShopAbout />
       </div>
     </div>
   );

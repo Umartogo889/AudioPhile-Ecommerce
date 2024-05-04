@@ -6,7 +6,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 // Components
 import Navbar from "./components/Navbar/Navbar";
-import ShopAbout from "./components/AudioSpicersAbout/ShopAbout";
 import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home";
 import Headphone from "./pages/Headphone";
@@ -21,27 +20,42 @@ import ProductCardInfoXX992 from "./components/ProductCardInfo/ProductInfoSpeake
 import Checkout from "./components/checkout/Checkout";
 
 function App() {
-  const [OrdersBasket, SetOrdersBasket] = useState([]);
-
-  // register order cilient
-  const getItem = JSON.parse(localStorage.getItem("card"));
+  const [OrdersBasket, SetOrdersBasket] = useState(
+    JSON.parse(localStorage.getItem("card")) || [{}]
+  );
 
   function cardInfo(card, id) {
-    SetOrdersBasket((prev) => {
-      return [...prev, card];
+    let getItem = JSON.parse(localStorage.getItem("card"));
+
+    // get card info
+
+    if (!card) {
+      SetOrdersBasket((prev) => {
+        return [...prev, card];
+      });
+    }
+
+    const FilterItem = getItem.filter((product) => {
+      return product;
     });
 
-    const filterCard = getItem.filter((element) => {
-      return element.id !== id;
+    FilterItem.forEach((element) => {
+      if (element !== card) {
+        SetOrdersBasket((prev) => {
+          return [...prev, card];
+        });
+      }
+
+      if (element.id === id) {
+        console.log((element.price = card.price));
+      }
     });
-
-    console.log(filterCard);
-
-    localStorage.setItem("card", JSON.stringify(OrdersBasket));
   }
 
+  localStorage.setItem("card", JSON.stringify(OrdersBasket));
+
   // loader
-  const [openLoader, SetopenLoader] = useState(true);
+  const [openLoader, SetopenLoader] = useState(false);
 
   setTimeout(() => {
     SetopenLoader(false);
@@ -91,7 +105,6 @@ function App() {
               />
               <Route path="/checkout-section" element={<Checkout />} />
             </Routes>
-            <ShopAbout />
           </div>
           <Footer />
         </BrowserRouter>

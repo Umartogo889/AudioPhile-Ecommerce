@@ -8,6 +8,7 @@ import { v4 as uuidv4 } from "uuid";
 import CardInfo from "./CardInfo";
 import FeaturesSection from "./FeaturesSection";
 import ProductsCard from "../../MenuCard/ProductsCard";
+import ShopAbout from "../../AudioSpicersAbout/ShopAbout";
 
 function ProductCardInfoZX9({ cardInfo }) {
   const productCardInfo = [
@@ -64,6 +65,7 @@ function ProductCardInfoZX9({ cardInfo }) {
         />
         <FeaturesSection productCardInfo={productCardInfo} />
         <ProductsCard />
+        <ShopAbout />
       </div>
     </div>
   );

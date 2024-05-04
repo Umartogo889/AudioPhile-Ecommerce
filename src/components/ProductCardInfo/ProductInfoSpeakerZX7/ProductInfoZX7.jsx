@@ -8,6 +8,7 @@ import { v4 as uuidv4 } from "uuid";
 import CardInfo from "./CardInfoZX7";
 import FeaturesSection from "./FeaturesSectionZX7";
 import ProductsCard from "../../MenuCard/ProductsCard";
+import ShopAbout from "../../AudioSpicersAbout/ShopAbout";
 
 function ProductCardInfoZX7({ cardInfo }) {
   const productCardInfo = [
@@ -40,7 +41,7 @@ function ProductCardInfoZX7({ cardInfo }) {
   function productPrice() {
     productCardInfo.map((productInfo) => {
       let obj = {
-        id: 1,
+        id: 2,
         1: {
           img: productInfo.mainImg,
           name: productInfo.name,
@@ -48,7 +49,7 @@ function ProductCardInfoZX7({ cardInfo }) {
         },
         price: productInfo.Cash * PurchaseAmount,
       };
-      cardInfo(obj);
+      cardInfo(obj, obj.id);
     });
   }
 
@@ -63,6 +64,7 @@ function ProductCardInfoZX7({ cardInfo }) {
         />
         <FeaturesSection productCardInfo={productCardInfo} />
         <ProductsCard />
+        <ShopAbout />
       </div>
     </div>
   );

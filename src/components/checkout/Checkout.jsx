@@ -123,7 +123,27 @@ function Checkout() {
         <div className="checkout-product">
           <h2 className="checkout-product-title">Summary</h2>
           <div className="checkout-product-container">
-            <p className="text-default card-order-title ">Yor cart is empty</p>
+            <p className="text-default card-order-title ">
+              <ul>
+                <li className="cardlist">
+                  <div className="product-list-info">
+                    <img
+                      src="https://audiophile-ecommerce-website.netlify.app/products/product-zx9-speaker/mobile/image-product.jpg"
+                      alt=""
+                      className="cardlist__img"
+                    />
+                    <div className="list-text-block">
+                      <div className="product-name">
+                        <h4>ZX9</h4>
+                      </div>
+                      <div className="text-default  product-price">$4,500</div>
+                    </div>
+                  </div>
+
+                  <div className="text-default product-list-quantity">x14</div>
+                </li>
+              </ul>
+            </p>
           </div>
           <div className="checkout-product-prices">
             <p className="text-default  checkout-product-prices-item">

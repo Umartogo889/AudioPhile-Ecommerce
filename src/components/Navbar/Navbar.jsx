@@ -57,13 +57,36 @@ function Navbar() {
                       <h3>CART (0)</h3>
                       <a href="#">Remove all</a>
                     </div>
-                    <div className="card-list"></div>
+                    <div className="card-list">
+                      <ul>
+                        <li className="cardlist">
+                          <div className="product-list-info">
+                            <img
+                              src="https://audiophile-ecommerce-website.netlify.app/products/product-zx9-speaker/mobile/image-product.jpg"
+                              alt=""
+                              className="cardlist__img"
+                            />
+                            <div className="list-text-block">
+                              <div className="product-name">
+                                <h4>ZX9</h4>
+                              </div>
+                              <div className="text-default  product-price">
+                                $4,500
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="text-default product-list-quantity">
+                            x14
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
                     <div className="card-footer">
-                      <h3 style={{ color: "#10101080" }}>TOTAL</h3>
+                      <h4 style={{ color: "#10101080" }}>TOTAL</h4>
                       <h3>$0</h3>
                     </div>
                     <a className="btn-chekout" href="/checkout-section">
-                      {" "}
                       CHEKOUT
                     </a>
                   </div>
