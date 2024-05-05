@@ -21,35 +21,19 @@ import Checkout from "./components/checkout/Checkout";
 
 function App() {
   const [OrdersBasket, SetOrdersBasket] = useState(
-    JSON.parse(localStorage.getItem("card")) || [{}]
+    JSON.parse(localStorage.getItem("card")) || []
   );
 
   function cardInfo(card, id) {
     let getItem = JSON.parse(localStorage.getItem("card"));
 
-    // get card info
-
-    if (!card) {
-      SetOrdersBasket((prev) => {
-        return [...prev, card];
-      });
+    const filterOrder = OrdersBasket.filter((order) => {
+      return order;
+    });
+    if (card.id === id) {
+      console.log("hello world");
     }
-
-    const FilterItem = getItem.filter((product) => {
-      return product;
-    });
-
-    FilterItem.forEach((element) => {
-      if (element !== card) {
-        SetOrdersBasket((prev) => {
-          return [...prev, card];
-        });
-      }
-
-      if (element.id === id) {
-        console.log((element.price = card.price));
-      }
-    });
+    // filterOrder.forEach((order) => {});
   }
 
   localStorage.setItem("card", JSON.stringify(OrdersBasket));
