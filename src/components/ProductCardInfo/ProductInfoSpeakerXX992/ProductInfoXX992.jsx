@@ -1,6 +1,6 @@
 // style
 import "../ProductCardInfo.css";
-
+import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 // react router dom
@@ -11,7 +11,7 @@ import FeaturesSection from "./FeaturesSectionXX992";
 import ProductsCard from "../../MenuCard/ProductsCard";
 import ShopAbout from "../../AudioSpicersAbout/ShopAbout";
 
-function ProductCardInfoZX7() {
+function ProductCardInfoZX7({ cardInfo }) {
   const productCardInfo = [
     {
       id: uuidv4(),
@@ -37,11 +37,29 @@ function ProductCardInfoZX7() {
       },
     },
   ];
+  const [PurchaseAmount, SetPurchaseAmount] = useState(1);
 
+  function productPrice() {
+    productCardInfo.map((productInfo) => {
+      let obj = {
+        id: 1,
+        img: "https://audiophile-ecommerce-website.netlify.app/products/product-xx99-mark-two-headphones/mobile/image-product.jpg",
+        name: "XX99 MARK II ",
+        total: PurchaseAmount,
+        price: productInfo.Cash * PurchaseAmount,
+      };
+      cardInfo(obj, obj.id);
+    });
+  }
   return (
     <div className="ProductCardInfo">
       <div className="ProductCardInfo-container">
-        <CardInfo productCardInfo={productCardInfo} />
+        <CardInfo
+          productCardInfo={productCardInfo}
+          PurchaseAmount={PurchaseAmount}
+          productPrice={productPrice}
+          SetPurchaseAmount={SetPurchaseAmount}
+        />
         <FeaturesSection productCardInfo={productCardInfo} />
         <ProductsCard />
         <ShopAbout />

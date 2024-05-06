@@ -1,4 +1,3 @@
-import { useState } from "react";
 import mainImg from "../CardProductInfoImg/category-img-speakers@2x.png";
 
 function CardInfo({
@@ -7,6 +6,10 @@ function CardInfo({
   PurchaseAmount,
   productPrice,
 }) {
+  const sendOrder = (quality) => {
+    productPrice();
+    SetPurchaseAmount(quality);
+  };
   return (
     <>
       {productCardInfo.map((cardInfo) => {
@@ -59,7 +62,7 @@ function CardInfo({
                     </button>
                   </div>
                   <button
-                    onClick={productPrice}
+                    onClick={() => sendOrder(1)}
                     type="button"
                     onChange={(e) => {
                       e.target.value;

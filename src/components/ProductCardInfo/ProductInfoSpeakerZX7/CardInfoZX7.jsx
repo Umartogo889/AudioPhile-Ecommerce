@@ -7,6 +7,10 @@ function CardInfoZX7({
   PurchaseAmount,
   productPrice,
 }) {
+  const sendOrder = (quality) => {
+    productPrice();
+    SetPurchaseAmount(quality);
+  };
   return (
     <>
       {productCardInfo.map((cardInfo) => {
@@ -60,7 +64,7 @@ function CardInfoZX7({
                   </div>
                   <button
                     type="button"
-                    onClick={productPrice}
+                    onClick={() => sendOrder(1)}
                     onChange={(e) => {
                       e.target.value;
                     }}

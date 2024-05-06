@@ -25,25 +25,20 @@ function App() {
   );
 
   function cardInfo(card, id) {
-    let getItem = JSON.parse(localStorage.getItem("card"));
-
-    const filterOrder = OrdersBasket.filter((order) => {
-      return order;
+    SetOrdersBasket((prev) => {
+      return [...prev, card];
     });
-    if (card.id === id) {
-      console.log("hello world");
-    }
-    // filterOrder.forEach((order) => {});
   }
 
+  // set cardinfo to localstorage
   localStorage.setItem("card", JSON.stringify(OrdersBasket));
 
   // loader
-  const [openLoader, SetopenLoader] = useState(false);
+  const [openLoader, SetopenLoader] = useState(true);
 
   setTimeout(() => {
     SetopenLoader(false);
-  }, 1700);
+  }, 2000);
 
   // main section
   return (
@@ -73,19 +68,19 @@ function App() {
               />
               <Route
                 path="/cardInfo-zx1-earphones"
-                element={<ProductCardInfoYX1 />}
+                element={<ProductCardInfoYX1 cardInfo={cardInfo} />}
               />
               <Route
                 path="/cardInfo-xx59-headphones"
-                element={<ProductCardInfoXX59 />}
+                element={<ProductCardInfoXX59 cardInfo={cardInfo} />}
               />
               <Route
                 path="/cardInfo-xx99-headphones"
-                element={<ProductCardInfoXX99 />}
+                element={<ProductCardInfoXX99 cardInfo={cardInfo} />}
               />
               <Route
                 path="/cardInfo-xx992-headphones"
-                element={<ProductCardInfoXX992 />}
+                element={<ProductCardInfoXX992 cardInfo={cardInfo} />}
               />
               <Route path="/checkout-section" element={<Checkout />} />
             </Routes>

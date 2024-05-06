@@ -12,7 +12,7 @@ import FeaturesSection from "./FeaturesSectionYX1";
 import ProductsCard from "../../MenuCard/ProductsCard";
 import ShopAbout from "../../AudioSpicersAbout/ShopAbout";
 
-function ProductCardInfoZX7() {
+function ProductCardInfoYX1({ cardInfo }) {
   const productCardInfo = [
     {
       id: uuidv4(),
@@ -38,11 +38,30 @@ function ProductCardInfoZX7() {
       },
     },
   ];
+  const [PurchaseAmount, SetPurchaseAmount] = useState(1);
+
+  function productPrice() {
+    productCardInfo.map((productInfo) => {
+      let obj = {
+        id: 1,
+        img: "https://audiophile-ecommerce-website.netlify.app/products/product-yx1-earphones/mobile/image-product.jpg",
+        name: "YX1 EARPHONE",
+        total: PurchaseAmount,
+        price: productInfo.Cash * PurchaseAmount,
+      };
+      cardInfo(obj, obj.id);
+    });
+  }
 
   return (
     <div className="ProductCardInfo">
       <div className="ProductCardInfo-container">
-        <CardInfo productCardInfo={productCardInfo} />
+        <CardInfo
+          productCardInfo={productCardInfo}
+          PurchaseAmount={PurchaseAmount}
+          productPrice={productPrice}
+          SetPurchaseAmount={SetPurchaseAmount}
+        />
         <FeaturesSection productCardInfo={productCardInfo} />
         <ProductsCard />
         <ShopAbout />
@@ -51,4 +70,4 @@ function ProductCardInfoZX7() {
   );
 }
 
-export default ProductCardInfoZX7;
+export default ProductCardInfoYX1;

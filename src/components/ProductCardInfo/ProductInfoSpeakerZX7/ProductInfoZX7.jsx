@@ -43,7 +43,7 @@ function ProductCardInfoZX7({ cardInfo }) {
       let obj = {
         id: 2,
         1: {
-          img: productInfo.mainImg,
+          img: "https://audiophile-ecommerce-website.netlify.app/products/product-zx7-speaker/mobile/image-product.jpg",
           name: productInfo.name,
           total: PurchaseAmount,
         },

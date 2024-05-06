@@ -12,6 +12,7 @@ import Logo from "../homeImg/logo.svg";
 import HamburgerIcon from "../homeImg/icon-hamburger-menu.svg";
 
 function Navbar() {
+  const getLocalOrder = JSON.parse(localStorage.getItem("card"));
   const [ShowMenu, SetShowMenu] = useState(false);
   const [ShowChecOut, SetShowChecOut] = useState(false);
 
@@ -55,31 +56,45 @@ function Navbar() {
                   <div className="ShowChecOut-textBlock">
                     <div className="card-header">
                       <h3>CART (0)</h3>
-                      <a href="#">Remove all</a>
+                      <a href="hello world">Remove all</a>
                     </div>
                     <div className="card-list">
                       <ul>
-                        <li className="cardlist">
-                          <div className="product-list-info">
-                            <img
-                              src="https://audiophile-ecommerce-website.netlify.app/products/product-zx9-speaker/mobile/image-product.jpg"
-                              alt=""
-                              className="cardlist__img"
-                            />
-                            <div className="list-text-block">
-                              <div className="product-name">
-                                <h4>ZX9</h4>
-                              </div>
-                              <div className="text-default  product-price">
-                                $4,500
-                              </div>
-                            </div>
-                          </div>
+                        {}
+                        {getLocalOrder.length === 0 ? (
+                          <h1 className="No-product">your card is empty :(</h1>
+                        ) : (
+                          getLocalOrder.map((card) => {
+                            console.log(card.id);
+                            return (
+                              <>
+                                <li className="cardlist">
+                                  <div className="product-list-info">
+                                    <div className="card-list-img-box">
+                                      <img
+                                        src={card.img}
+                                        alt=""
+                                        className="cardlist__img"
+                                      />
+                                    </div>
+                                    <div className="list-text-block">
+                                      <div className="product-name">
+                                        <h4>{card.name}</h4>
+                                      </div>
+                                      <div className="text-default  product-price">
+                                        ${card.price}
+                                      </div>
+                                    </div>
+                                  </div>
 
-                          <div className="text-default product-list-quantity">
-                            x14
-                          </div>
-                        </li>
+                                  <div className="text-default product-list-quantity">
+                                    x{card.total}
+                                  </div>
+                                </li>
+                              </>
+                            );
+                          })
+                        )}
                       </ul>
                     </div>
                     <div className="card-footer">

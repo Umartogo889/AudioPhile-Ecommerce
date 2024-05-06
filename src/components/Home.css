@@ -473,6 +473,10 @@
     margin-left: 3px;
     font-weight: 700;
 }
+.product-list-quantity{
+    font-size: 17px;
+    font-weight: 500;
+}
 .product-list-info .cardlist__img {
     width: 65px;
 }

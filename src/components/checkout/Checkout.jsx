@@ -7,6 +7,7 @@ import { useState } from "react";
 
 function Checkout() {
   const [cashOpen, SetOpenash] = useState(true);
+  const getLocalOrder = JSON.parse(localStorage.getItem("card"));
   return (
     <div className="main-container-wrapper">
       <div className="main-container">
@@ -125,23 +126,41 @@ function Checkout() {
           <div className="checkout-product-container">
             <p className="text-default card-order-title ">
               <ul>
-                <li className="cardlist">
-                  <div className="product-list-info">
-                    <img
-                      src="https://audiophile-ecommerce-website.netlify.app/products/product-zx9-speaker/mobile/image-product.jpg"
-                      alt=""
-                      className="cardlist__img"
-                    />
-                    <div className="list-text-block">
-                      <div className="product-name">
-                        <h4>ZX9</h4>
-                      </div>
-                      <div className="text-default  product-price">$4,500</div>
-                    </div>
-                  </div>
+              
+                {getLocalOrder.length === 0 ? (
+                  <h1 className="No-product">your card is empty :(</h1>
+                ) : (
+                  getLocalOrder.map((card) => {
+                    console.log(card.id);
+                    return (
+                      <>
+                        <li className="cardlist">
+                          <div className="product-list-info">
+                            <div className="card-list-img-box">
+                              <img
+                                src={card.img}
+                                alt=""
+                                className="cardlist__img"
+                              />
+                            </div>
+                            <div className="list-text-block">
+                              <div className="product-name">
+                                <h4>{card.name}</h4>
+                              </div>
+                              <div className="text-default  product-price">
+                                ${card.price}
+                              </div>
+                            </div>
+                          </div>
 
-                  <div className="text-default product-list-quantity">x14</div>
-                </li>
+                          <div className="text-default product-list-quantity">
+                            x{card.total}
+                          </div>
+                        </li>
+                      </>
+                    );
+                  })
+                )}
               </ul>
             </p>
           </div>

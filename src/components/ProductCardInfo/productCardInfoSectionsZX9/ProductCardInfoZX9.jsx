@@ -43,14 +43,12 @@ function ProductCardInfoZX9({ cardInfo }) {
     productCardInfo.map((productInfo) => {
       let obj = {
         id: 1,
-        1: {
-          img: productInfo.mainImg,
-          name: productInfo.name,
-          total: PurchaseAmount,
-        },
+        img: "https://audiophile-ecommerce-website.netlify.app/products/product-zx9-speaker/mobile/image-product.jpg",
+        name: productInfo.name,
+        total: PurchaseAmount,
         price: productInfo.Cash * PurchaseAmount,
       };
-      cardInfo(obj, 1);
+      cardInfo(obj, obj.id);
     });
   }
 

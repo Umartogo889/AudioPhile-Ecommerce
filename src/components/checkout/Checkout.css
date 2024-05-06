@@ -211,21 +211,40 @@
     padding: 0px 5px;
 }
 .list-text-block {
-    margin-top: 5px;
     display: flex;
     flex-direction: column;
     align-items: start;
-    margin-left: 15px;
+    margin-left: 14px;
     font-weight: 500;
+    gap: 5px;
 }
 .list-text-block h4 {
     color: #000;
     text-align: start;
     margin-left: 3px;
-    font-weight: 700;
+    font-weight: 600;
+    font-size: 14px;
+}
+.card-list-img-box {
+    width: 60px;
+    height: 55px;
+    background: var(--color-grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
 }
 .product-list-info .cardlist__img {
-    width: 65px;
+    height: 55px;
+    width: 55px;
+}
+.product-price {
+    font-size: 14px;
+}
+.No-product {
+    font-size: 18px;
+    color: #000;
+    margin: auto;
 }
 
 @media (max-width: 620px) {
