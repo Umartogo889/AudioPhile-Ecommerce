@@ -129,6 +129,9 @@
         text-align: center;
         margin-top: 30px;
     }
+    .Zx9Speaker_text_block a {
+        margin-bottom: 30px;
+    }
     .Zx9Speaker_text_block h1 {
         width: 300px;
         text-align: center;
@@ -154,6 +157,7 @@
         margin-top: 20px;
         display: flex;
         flex-direction: column;
+        margin-bottom: 10px;
         gap: 20px;
     }
     .YX1Earphones-container img {
