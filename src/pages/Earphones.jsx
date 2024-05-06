@@ -2,6 +2,7 @@
 import "../components/Earphones/Earphones.css";
 import "../components/Earphones/EarphonesResponsive.css";
 
+
 // components
 import HeaderEarphones from "../components/HeaderHero/HeaderEarphones";
 import ProductsCard from "../components/MenuCard/ProductsCard";

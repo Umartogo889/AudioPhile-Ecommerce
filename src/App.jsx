@@ -18,6 +18,7 @@ import ProductCardInfoXX59 from "./components/ProductCardInfo/productCardInfoSec
 import ProductCardInfoXX99 from "./components/ProductCardInfo/ProductInfoSpeakerXX99/ProductInfoXX99";
 import ProductCardInfoXX992 from "./components/ProductCardInfo/ProductInfoSpeakerXX992/ProductInfoXX992";
 import Checkout from "./components/checkout/Checkout";
+import ProductCardInfo from "./components/ProductCardInfo";
 
 function App() {
   const [OrdersBasket, SetOrdersBasket] = useState(
@@ -86,6 +87,7 @@ function App() {
             </Routes>
           </div>
           <Footer />
+          <ProductCardInfo />
         </BrowserRouter>
       </div>
     </>

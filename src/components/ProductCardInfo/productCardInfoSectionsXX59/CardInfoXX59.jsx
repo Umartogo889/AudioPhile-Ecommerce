@@ -1,4 +1,3 @@
-import { useState } from "react";
 import mainImg from "../CardProductInfoImg/image-category-page-preview.jpg";
 
 function CardInfoXX59({

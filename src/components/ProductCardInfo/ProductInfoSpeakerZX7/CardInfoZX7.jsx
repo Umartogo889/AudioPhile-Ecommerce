@@ -1,5 +1,5 @@
 import { useState } from "react";
-import mainImg from "../CardProductInfoImg/image-product-zx7.jpg";
+import mainImg from "../CardProductInfoImg/image-category-page-preview-YX1.jpg";
 
 function CardInfoZX7({
   productCardInfo,
