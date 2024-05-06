@@ -14,7 +14,7 @@ function Home() {
       <ZX7Speaker />
       <YX1Earphones />
       <ShopAbout />
-    </div>
+    </div>  
   );
 }
 
