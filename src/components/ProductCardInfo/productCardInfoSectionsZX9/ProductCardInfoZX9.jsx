@@ -10,6 +10,9 @@ import FeaturesSection from "./FeaturesSection";
 import ProductsCard from "../../MenuCard/ProductsCard";
 import ShopAbout from "../../AudioSpicersAbout/ShopAbout";
 
+// images
+import productImg from "../CardProductInfoImg/image-productZX9.jpg";
+
 function ProductCardInfoZX9({ cardInfo }) {
   const productCardInfo = [
     {
@@ -43,7 +46,7 @@ function ProductCardInfoZX9({ cardInfo }) {
     productCardInfo.map((productInfo) => {
       let obj = {
         id: 1,
-        img: "https://audiophile-ecommerce-website.netlify.app/products/product-zx9-speaker/mobile/image-product.jpg",
+        img: productImg,
         name: productInfo.name,
         total: PurchaseAmount,
         price: productInfo.Cash * PurchaseAmount,

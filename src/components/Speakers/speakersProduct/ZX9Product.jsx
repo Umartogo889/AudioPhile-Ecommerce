@@ -1,7 +1,7 @@
 import "../Speakers.css";
 import "../SpeakersResponsive.css";
 // site img
-import MainImg from "../speakersImg/image-category-page-preview-ZX9.jpg";
+import MainImg from "../SpeakersImg/image-category-page-preview-ZX9.jpg";
 
 function ZX9Product() {
   return (

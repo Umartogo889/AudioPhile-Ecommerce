@@ -10,6 +10,7 @@ import ProductsCard from "../MenuCard/ProductsCard";
 // img hamburger
 import Logo from "../homeImg/logo.svg";
 import HamburgerIcon from "../homeImg/icon-hamburger-menu.svg";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
   const getLocalOrder = JSON.parse(localStorage.getItem("card"));
@@ -121,24 +122,42 @@ function Navbar() {
           </div>
           <ul className="nav-list">
             <li className="list-item">
-              <a className="nav-link" href="/">
+              <NavLink
+                className="nav-link"
+                spy={true}
+                offset={true}
+                preventScrollReset={false}
+                to="/"
+              >
                 HOME
-              </a>
+              </NavLink>
             </li>
             <li className="list-item">
-              <a className="nav-link" href="/headphones">
+              <NavLink
+                className="nav-link"
+                preventScrollReset={false}
+                to="/headphones"
+              >
                 HEADPHONES
-              </a>
+              </NavLink>
             </li>
             <li className="list-item">
-              <a className="nav-link" href="/speakers">
+              <NavLink
+                className="nav-link"
+                preventScrollReset={false}
+                to="/speakers"
+              >
                 SPEAKERS
-              </a>
+              </NavLink>
             </li>
             <li className="list-item">
-              <a className="nav-link" href="/earphones">
+              <NavLink
+                className="nav-link"
+                preventScrollReset={false}
+                to="/earphones"
+              >
                 EARPHONES
-              </a>
+              </NavLink>
             </li>
           </ul>
 

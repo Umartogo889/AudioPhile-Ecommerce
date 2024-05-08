@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 // photo
 import rightIcon from "./menuImg/icon-arrow-right.08d4cd77.svg";
-import earphones from "./menuImg/earphones.png";
+import earphones from "./menuImg/earphones-category.png";
 import headphones from "./menuImg/headphones.png";
 import speakers from "./menuImg/speakers.png";
 
