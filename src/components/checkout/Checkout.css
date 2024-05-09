@@ -248,6 +248,9 @@
 }
 
 @media (max-width: 620px) {
+    .main-container-wrapper {
+        margin-bottom: -50px;
+    }
     .main-container {
         width: 97%;
         flex-direction: column;

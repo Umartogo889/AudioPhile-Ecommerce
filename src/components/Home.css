@@ -92,7 +92,7 @@
 .backdrop-bg .ShowChecOut-container {
     width: 90%;
 }
-.showOut{
+.showOut {
     margin-top: 50px;
 }
 
@@ -109,7 +109,6 @@
     position: relative;
     display: flex;
     width: 1110px;
-  
 }
 
 /* hero main img  */
@@ -434,6 +433,11 @@
     text-align: center;
     font-size: 15px;
 }
+.ShowChecOut .btn-chekout span {
+    width: 100%;
+    height: 100%;
+    background: red;
+}
 .ShowChecOut .btn-chekout:hover {
     background: #e7a681;
 }
@@ -476,7 +480,7 @@
     margin-left: 3px;
     font-weight: 700;
 }
-.product-list-quantity{
+.product-list-quantity {
     font-size: 17px;
     font-weight: 500;
 }

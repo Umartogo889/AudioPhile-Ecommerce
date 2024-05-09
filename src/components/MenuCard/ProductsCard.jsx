@@ -30,7 +30,7 @@ function ProductsCard({ SetShowMenu }) {
                   />
                 </div>
                 <div className="menu_card_text-Title">
-                  <Link to={info.link} onClick={() => SetShowMenu(false)}>
+                  <Link to={info.link}>
                     <h3>{info.name}</h3>
                     <p>
                       SHOP

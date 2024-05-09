@@ -105,7 +105,7 @@ function Navbar() {
                       <h3>$0</h3>
                     </div>
                     <Link className="btn-chekout" to="/checkout-section">
-                      CHEKOUT
+                      <span onClick={() => SetShowChecOut(false)}>CHEKOUT</span>
                     </Link>
                   </div>
                 </div>
