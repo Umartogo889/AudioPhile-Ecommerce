@@ -1,10 +1,9 @@
-
 @media (max-width: 430px) {
     .ShowChecOut {
         margin-left: auto;
         margin-top: -150px;
         width: 100%;
-        height: 530px;
+        height: 490px;
         background: #fff;
         border-radius: 8px;
         padding: 20px;
@@ -855,6 +854,8 @@
     }
     .backdrop-bg .ShowChecOut-container {
         width: 1110px;
+        height: 0;
+        margin-top: -300px;
     }
     .footer {
         margin-top: 200px;

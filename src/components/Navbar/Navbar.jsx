@@ -10,7 +10,7 @@ import ProductsCard from "../MenuCard/ProductsCard";
 // img hamburger
 import Logo from "../homeImg/logo.svg";
 import HamburgerIcon from "../homeImg/icon-hamburger-menu.svg";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Navbar() {
   const getLocalOrder = JSON.parse(localStorage.getItem("card"));
@@ -26,6 +26,10 @@ function Navbar() {
   function CloseMenu(e) {
     if (e.target.className === "backdrop-bg") {
       SetShowMenu(false);
+    }
+  }
+  function CloseChecOut(e) {
+    if (e.target.className === "backdrop-bg , Container ,showOut") {
       SetShowChecOut(false);
     }
   }
@@ -46,7 +50,7 @@ function Navbar() {
           </div>
 
           <div
-            onClick={CloseMenu}
+            onClick={(e) => CloseChecOut(e)}
             className={
               !ShowChecOut ? "Rembg" : "backdrop-bg , Container ,showOut"
             }
@@ -61,12 +65,10 @@ function Navbar() {
                     </div>
                     <div className="card-list">
                       <ul>
-                        {}
                         {getLocalOrder.length === 0 ? (
                           <h1 className="No-product">your card is empty :(</h1>
                         ) : (
                           getLocalOrder.map((card) => {
-                            console.log(card.id);
                             return (
                               <>
                                 <li className="cardlist">
@@ -102,9 +104,9 @@ function Navbar() {
                       <h4 style={{ color: "#10101080" }}>TOTAL</h4>
                       <h3>$0</h3>
                     </div>
-                    <a className="btn-chekout" href="/checkout-section">
+                    <Link className="btn-chekout" to="/checkout-section">
                       CHEKOUT
-                    </a>
+                    </Link>
                   </div>
                 </div>
               )}
@@ -122,40 +124,22 @@ function Navbar() {
           </div>
           <ul className="nav-list">
             <li className="list-item">
-              <NavLink
-                className="nav-link"
-                spy={true}
-                offset={true}
-                preventScrollReset={false}
-                to="/"
-              >
+              <NavLink className="nav-link" to="/">
                 HOME
               </NavLink>
             </li>
             <li className="list-item">
-              <NavLink
-                className="nav-link"
-                preventScrollReset={false}
-                to="/headphones"
-              >
+              <NavLink reloadDocument className="nav-link" to="/headphones">
                 HEADPHONES
               </NavLink>
             </li>
             <li className="list-item">
-              <NavLink
-                className="nav-link"
-                preventScrollReset={false}
-                to="/speakers"
-              >
+              <NavLink reloadDocument className="nav-link" to="/speakers">
                 SPEAKERS
               </NavLink>
             </li>
             <li className="list-item">
-              <NavLink
-                className="nav-link"
-                preventScrollReset={false}
-                to="/earphones"
-              >
+              <NavLink reloadDocument className="nav-link" to="/earphones">
                 EARPHONES
               </NavLink>
             </li>

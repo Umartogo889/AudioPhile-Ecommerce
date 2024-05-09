@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import MainImg from "../SpeakersImg/image-category-page-preview-Z7X.jpg";
 
 function Z7XProduct() {
@@ -13,7 +14,7 @@ function Z7XProduct() {
           speaker uses high-end audiophile components that represents the top of
           the line powered speakers for home or studio use.
         </p>
-        <a href={"/cardInfo-zx7-speaker"}>SEE PRODUCT</a>
+        <Link to={"/cardInfo-zx7-speaker"}>SEE PRODUCT</Link>
       </div>
     </div>
   );

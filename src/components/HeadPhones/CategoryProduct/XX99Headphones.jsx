@@ -1,9 +1,9 @@
 // style
+import { Link } from "react-router-dom";
 import "../Headphone.css";
 
 // main img
 import MainImg from "../HeadPhoneImg/image-category-page-preview-xx99.jpg";
-
 
 function XX99Headphones() {
   return (
@@ -15,7 +15,7 @@ function XX99Headphones() {
           detailed and accurate audio reproduction for audiophiles, mixing
           engineers, and music aficionados alike in studios and on the go.
         </p>
-        <a href={"/cardInfo-xx99-headphones"}>SEE PRODUCT</a>
+        <Link to={"/cardInfo-xx99-headphones"}>SEE PRODUCT</Link>
       </div>
       <div className="CategoryProduct_img">
         <img src={MainImg} alt="" />

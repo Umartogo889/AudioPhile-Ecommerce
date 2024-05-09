@@ -4,6 +4,7 @@ import "../EarphonesResponsive.css";
 
 // main img
 import MainImg from "../EarphonesImg/image-category-page-preview-YX1.jpg";
+import { Link } from "react-router-dom";
 
 function YX1Product() {
   return (
@@ -24,7 +25,7 @@ function YX1Product() {
           new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even
           in noisy environments with its active noise cancellation feature.
         </p>
-        <a href={"/cardInfo-zx1-earphones"}>SEE PRODUCT</a>
+        <Link to={"/cardInfo-zx1-earphones"}>SEE PRODUCT</Link>
       </div>
     </div>
   );

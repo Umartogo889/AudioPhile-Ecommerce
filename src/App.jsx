@@ -51,7 +51,7 @@ function App() {
       )}
 
       <div className="Container">
-        <BrowserRouter>
+        <BrowserRouter >
           <Navbar />
           <div className="all-items">
             <Routes>

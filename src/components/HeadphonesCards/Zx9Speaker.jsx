@@ -1,4 +1,5 @@
 // style
+import { Link } from "react-router-dom";
 import "../Home.css";
 import MainImg from "../homeImg/category-img-speakers@2x.png";
 
@@ -15,7 +16,7 @@ function Zx9Speaker() {
             Upgrade to premium speakers that are phenomenally built to deliver
             truly remarkable sound.
           </p>
-          <a href={"/cardInfo-zx9-speaker"}>SEE PRODUCT</a>
+          <Link to={"/cardInfo-zx9-speaker"}>SEE PRODUCT</Link>
         </div>
       </div>
     </div>

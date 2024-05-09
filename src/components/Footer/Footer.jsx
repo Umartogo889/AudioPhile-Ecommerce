@@ -6,6 +6,7 @@ import logo from "../homeImg/logo.svg";
 import instagramIcon from "../homeImg/icon-instagram.svg";
 import twittericon from "../homeImg/icon-twitter.svg";
 import facebookIcon from "../homeImg/icon-facebook.svg";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -16,16 +17,16 @@ function Footer() {
           <img src={logo} alt="" />
           <ul className="footer-nav-list">
             <li className="footer-list-item">
-              <a href="/">HOME</a>
+              <Link to="/">HOME</Link>
             </li>
             <li className="footer-list-item">
-              <a href="/headphones">HEADPHONES</a>
+              <Link to="/headphones">HEADPHONES</Link>
             </li>
             <li className="footer-list-item">
-              <a href="/speakers">SPEAKERS</a>
+              <Link to="/speakers">SPEAKERS</Link>
             </li>
             <li className="footer-list-item">
-              <a href="/earphones">EARPHONES</a>
+              <Link to="/earphones">EARPHONES</Link>
             </li>
           </ul>
         </section>
