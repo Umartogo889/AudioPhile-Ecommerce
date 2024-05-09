@@ -19,6 +19,7 @@ import ProductCardInfoXX99 from "./components/ProductCardInfo/ProductInfoSpeaker
 import ProductCardInfoXX992 from "./components/ProductCardInfo/ProductInfoSpeakerXX992/ProductInfoXX992";
 import Checkout from "./components/checkout/Checkout";
 import ProductCardInfo from "./components/ProductCardInfo";
+import ScrollToTop from "./Layout/Scrooltop/ScrollTop";
 
 function App() {
   const [OrdersBasket, SetOrdersBasket] = useState(
@@ -51,11 +52,12 @@ function App() {
       )}
 
       <div className="Container">
-        <BrowserRouter >
+        <BrowserRouter>
           <Navbar />
+          <ScrollToTop />
           <div className="all-items">
             <Routes>
-              <Route index element={<Home />} />
+              <Route index exact element={<Home />} />
               <Route path="/headphones" element={<Headphone />} />
               <Route path="/speakers" element={<Speakers />} />
               <Route path="/earphones" element={<Earphones />} />

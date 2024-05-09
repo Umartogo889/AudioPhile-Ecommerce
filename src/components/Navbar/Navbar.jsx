@@ -124,22 +124,34 @@ function Navbar() {
           </div>
           <ul className="nav-list">
             <li className="list-item">
-              <NavLink className="nav-link" to="/">
+              <NavLink preventScrollReset={true} className="nav-link" to="/">
                 HOME
               </NavLink>
             </li>
             <li className="list-item">
-              <NavLink reloadDocument className="nav-link" to="/headphones">
+              <NavLink
+                preventScrollReset={true}
+                className="nav-link"
+                to="/headphones"
+              >
                 HEADPHONES
               </NavLink>
             </li>
             <li className="list-item">
-              <NavLink reloadDocument className="nav-link" to="/speakers">
+              <NavLink
+                preventScrollReset={true}
+                className="nav-link"
+                to="/speakers"
+              >
                 SPEAKERS
               </NavLink>
             </li>
             <li className="list-item">
-              <NavLink reloadDocument className="nav-link" to="/earphones">
+              <NavLink
+                preventScrollReset={true}
+                className="nav-link"
+                to="/earphones"
+              >
                 EARPHONES
               </NavLink>
             </li>
