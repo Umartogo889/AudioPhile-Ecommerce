@@ -4,8 +4,8 @@ import "../ProductCardInfo.css";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
-// react router dom
-
+// images
+import productImg from "../CardProductInfoImg/category-img-yx1.jpg";
 // components
 import CardInfo from "./CardInfoYX1";
 import FeaturesSection from "./FeaturesSectionYX1";
@@ -44,12 +44,12 @@ function ProductCardInfoYX1({ cardInfo }) {
     productCardInfo.map((productInfo) => {
       let obj = {
         id: 1,
-        img: "https://audiophile-ecommerce-website.netlify.app/products/product-yx1-earphones/mobile/image-product.jpg",
+        img: productImg,
         name: "YX1 EARPHONE",
         total: PurchaseAmount,
         price: productInfo.Cash * PurchaseAmount,
       };
-      cardInfo(obj, obj.id);
+      cardInfo(obj, obj.price);
     });
   }
 

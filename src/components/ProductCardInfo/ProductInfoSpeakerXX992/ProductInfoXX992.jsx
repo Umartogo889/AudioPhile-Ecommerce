@@ -3,8 +3,8 @@ import "../ProductCardInfo.css";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
-// react router dom
-
+// images
+import productImg from "../CardProductInfoImg/image-product-xx992.jpg";
 // components
 import CardInfo from "./CardInfoXX992";
 import FeaturesSection from "./FeaturesSectionXX992";
@@ -43,12 +43,12 @@ function ProductCardInfoZX7({ cardInfo }) {
     productCardInfo.map((productInfo) => {
       let obj = {
         id: 1,
-        img: "https://audiophile-ecommerce-website.netlify.app/products/product-xx99-mark-two-headphones/mobile/image-product.jpg",
+        img: productImg,
         name: "XX99 MARK II ",
         total: PurchaseAmount,
         price: productInfo.Cash * PurchaseAmount,
       };
-      cardInfo(obj, obj.id);
+      cardInfo(obj, obj.price);
     });
   }
   return (

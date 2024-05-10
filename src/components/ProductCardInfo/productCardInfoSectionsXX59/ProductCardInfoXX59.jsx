@@ -2,6 +2,9 @@
 import "../ProductCardInfo.css";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+
+// images
+import productImg from "../CardProductInfoImg/image-product-xx59.jpg";
 // components
 import CardInfo from "./CardInfoXX59";
 import FeaturesSection from "./FeaturesSectionXX59";
@@ -39,12 +42,12 @@ function ProductCardInfoXX59({ cardInfo }) {
     productCardInfo.map((productInfo) => {
       let obj = {
         id: 1,
-        img: "https://audiophile-ecommerce-website.netlify.app/products/product-xx59-headphones/mobile/image-product.jpg",
+        img: productImg,
         name: productInfo.name,
         total: PurchaseAmount,
         price: productInfo.Cash * PurchaseAmount,
       };
-      cardInfo(obj, obj.id);
+      cardInfo(obj, obj.price);
     });
   }
 

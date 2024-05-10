@@ -25,11 +25,16 @@ function App() {
   const [OrdersBasket, SetOrdersBasket] = useState(
     JSON.parse(localStorage.getItem("card")) || []
   );
+  const [totalPrice, setTotalPrice] = useState(
+    JSON.parse(localStorage.getItem(+"totalPrice"))
+  );
 
   function cardInfo(card, id) {
     SetOrdersBasket((prev) => {
       return [...prev, card];
     });
+    setTotalPrice(totalPrice + id);
+    localStorage.setItem("totalPrice", totalPrice);
   }
 
   // set cardinfo to localstorage

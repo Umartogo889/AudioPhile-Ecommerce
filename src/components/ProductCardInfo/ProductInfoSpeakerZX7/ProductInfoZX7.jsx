@@ -4,6 +4,9 @@ import "../ProductCardInfo.css";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
+// image
+import productImg from "../CardProductInfoImg/image-product-zx7.jpg";
+
 // components
 import CardInfo from "./CardInfoZX7";
 import FeaturesSection from "./FeaturesSectionZX7";
@@ -42,14 +45,12 @@ function ProductCardInfoZX7({ cardInfo }) {
     productCardInfo.map((productInfo) => {
       let obj = {
         id: 2,
-        1: {
-          img: "https://audiophile-ecommerce-website.netlify.app/products/product-zx7-speaker/mobile/image-product.jpg",
-          name: productInfo.name,
-          total: PurchaseAmount,
-        },
+        img: productImg,
+        name: productInfo.name,
+        total: PurchaseAmount,
         price: productInfo.Cash * PurchaseAmount,
       };
-      cardInfo(obj, obj.id);
+      cardInfo(obj, obj.price);
     });
   }
 

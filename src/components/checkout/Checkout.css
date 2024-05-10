@@ -54,7 +54,7 @@
     width: 100%;
     height: 56px;
     border-radius: 8px;
-    font-family: "Manrope";
+    font-family: "Manrope", sans-serif;
     border: 1px solid #cfcfcf;
     font-size: 15px;
     font-weight: 500;
@@ -167,10 +167,10 @@
     color: #000;
     font-weight: 600;
     font-size: 20px;
-}
-.checkout-product-prices-item-span {
+    font-family: "Manrope";
     margin-top: 8px;
 }
+
 .checkout-product-container {
     color: #10101080;
     font-size: 17px;
@@ -294,11 +294,15 @@
 }
 
 @media (min-width: 620px) and (max-width: 768px) {
+    .main-container-wrapper {
+        margin-bottom: -50px;
+    }
     .main-container {
         width: 97%;
         flex-direction: column;
         margin-top: 150px;
     }
+
     .checkout-product {
         width: 97%;
         height: 500px;
@@ -324,6 +328,9 @@
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
+    .main-container-wrapper {
+        margin-bottom: -50px;
+    }
     .main-container {
         width: 97%;
         flex-direction: column;
@@ -353,6 +360,9 @@
     }
 }
 @media (min-width: 992px) and (max-width: 1060px) {
+    .main-container-wrapper {
+        margin-bottom: -150px;
+    }
     .main-container {
         width: 97%;
     }

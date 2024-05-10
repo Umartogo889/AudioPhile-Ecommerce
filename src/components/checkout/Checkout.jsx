@@ -9,6 +9,7 @@ import cashImg from "../checkout/img/icon-cash-payment.svg";
 function Checkout() {
   const [cashOpen, SetOpenash] = useState(true);
   const getLocalOrder = JSON.parse(localStorage.getItem("card"));
+  const totalPrice = JSON.parse(localStorage.getItem("totalPrice"));
   return (
     <div className="main-container-wrapper">
       <div className="main-container">
@@ -167,19 +168,27 @@ function Checkout() {
           <div className="checkout-product-prices">
             <p className="text-default  checkout-product-prices-item">
               Total
-              <span className="checkout-product-prices-item-span">$0</span>
+              <span className="checkout-product-prices-item-span">
+                {totalPrice ? "$" + totalPrice : "$0"}
+              </span>
             </p>
             <p className="text-default  checkout-product-prices-item">
               Shipping
-              <span className="checkout-product-prices-item-span">$50</span>
+              <span className="checkout-product-prices-item-span">
+                {getLocalOrder.length > 0 ? "$50" : "$0"}
+              </span>
             </p>
             <p className="text-default  checkout-product-prices-item">
               Vat (Included)
-              <span className="checkout-product-prices-item-span">$0</span>
+              <span className="checkout-product-prices-item-span">
+                $ {getLocalOrder.length > 0 ? getLocalOrder.length * 493 : "0"}
+              </span>
             </p>
             <p className="text-default  checkout-product-prices-item">
               Grand Total
-              <span className="checkout-product-prices-item-span">$0</span>
+              <span className="checkout-product-prices-item-span">
+                ${totalPrice ? 50 + totalPrice : "0"}
+              </span>
             </p>
           </div>
           <button

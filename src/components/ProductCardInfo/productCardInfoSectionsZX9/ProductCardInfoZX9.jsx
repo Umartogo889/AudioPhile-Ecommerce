@@ -51,7 +51,7 @@ function ProductCardInfoZX9({ cardInfo }) {
         total: PurchaseAmount,
         price: productInfo.Cash * PurchaseAmount,
       };
-      cardInfo(obj, obj.id);
+      cardInfo(obj, obj.price);
     });
   }
 

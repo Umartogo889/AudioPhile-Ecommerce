@@ -1,5 +1,4 @@
-import { useState } from "react";
-import mainImg from "../CardProductInfoImg/image-category-page-preview-YX1.jpg";
+import mainImg from "../CardProductInfoImg/ProduuctInfo-zx7.jpg";
 
 function CardInfoZX7({
   productCardInfo,

@@ -14,6 +14,7 @@ import { Link, NavLink } from "react-router-dom";
 
 function Navbar() {
   const getLocalOrder = JSON.parse(localStorage.getItem("card"));
+  const totalPrice = JSON.parse(localStorage.getItem("totalPrice"));
   const [ShowMenu, SetShowMenu] = useState(false);
   const [ShowChecOut, SetShowChecOut] = useState(false);
 
@@ -33,6 +34,10 @@ function Navbar() {
       SetShowChecOut(false);
     }
   }
+  const BtnRemoveAll = (card, totalPrice) => {
+    localStorage.removeItem(card);
+    localStorage.removeItem(totalPrice);
+  };
 
   return (
     <>
@@ -61,7 +66,13 @@ function Navbar() {
                   <div className="ShowChecOut-textBlock">
                     <div className="card-header">
                       <h3>CART (0)</h3>
-                      <a href="hello world">Remove all</a>
+                      <span
+                        onClick={() => {
+                          BtnRemoveAll("card", "totalPrice");
+                        }}
+                      >
+                        Remove all
+                      </span>
                     </div>
                     <div className="card-list">
                       <ul>
@@ -102,7 +113,7 @@ function Navbar() {
                     </div>
                     <div className="card-footer">
                       <h4 style={{ color: "#10101080" }}>TOTAL</h4>
-                      <h3>$0</h3>
+                      <h3>${totalPrice > 0 ? totalPrice : 0}</h3>
                     </div>
                     <Link className="btn-chekout" to="/checkout-section">
                       <span onClick={() => SetShowChecOut(false)}>CHEKOUT</span>
