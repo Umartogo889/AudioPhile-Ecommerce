@@ -7,7 +7,7 @@ import "../components/Earphones/EarphonesResponsive.css";
 import HeaderEarphones from "../components/HeaderHero/HeaderEarphones";
 import ProductsCard from "../components/MenuCard/ProductsCard";
 import YX1Product from "../components/Earphones/EarphonesProduct/YX1Product";
-import ShopAbout from "../components/AudioSpicersAbout/ShopAbout";
+import ShopAbout from "../components/audioSpicersAbout/ShopAbout";
 
 function Earphones() {
   return (

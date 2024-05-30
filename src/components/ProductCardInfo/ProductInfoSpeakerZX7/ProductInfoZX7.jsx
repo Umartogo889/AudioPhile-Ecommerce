@@ -11,7 +11,7 @@ import productImg from "../CardProductInfoImg/image-product-zx7.jpg";
 import CardInfo from "./CardInfoZX7";
 import FeaturesSection from "./FeaturesSectionZX7";
 import ProductsCard from "../../MenuCard/ProductsCard";
-import ShopAbout from "../../AudioSpicersAbout/ShopAbout";
+import ShopAbout from "../../audioSpicersAbout/ShopAbout";
 
 function ProductCardInfoZX7({ cardInfo }) {
   const productCardInfo = [

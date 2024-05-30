@@ -10,7 +10,7 @@ import productImg from "../CardProductInfoImg/category-img-yx1.jpg";
 import CardInfo from "./CardInfoYX1";
 import FeaturesSection from "./FeaturesSectionYX1";
 import ProductsCard from "../../MenuCard/ProductsCard";
-import ShopAbout from "../../AudioSpicersAbout/ShopAbout";
+import ShopAbout from "../../audioSpicersAbout/ShopAbout";
 
 function ProductCardInfoYX1({ cardInfo }) {
   const productCardInfo = [

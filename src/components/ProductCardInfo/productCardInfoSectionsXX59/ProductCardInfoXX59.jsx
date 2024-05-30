@@ -9,7 +9,7 @@ import productImg from "../CardProductInfoImg/image-product-xx59.jpg";
 import CardInfo from "./CardInfoXX59";
 import FeaturesSection from "./FeaturesSectionXX59";
 import ProductsCard from "../../MenuCard/ProductsCard";
-import ShopAbout from "../../AudioSpicersAbout/ShopAbout";
+import ShopAbout from "../../audioSpicersAbout/ShopAbout";
 
 function ProductCardInfoXX59({ cardInfo }) {
   const productCardInfo = [

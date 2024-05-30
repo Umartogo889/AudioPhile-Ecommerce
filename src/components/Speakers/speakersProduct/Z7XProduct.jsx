@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import MainImg from "../SpeakersImg/image-category-page-preview-Z7X.jpg";
+import MainImg from "../speakersImg/image-category-page-preview-Z7X.jpg";
 
 function Z7XProduct() {
   return (

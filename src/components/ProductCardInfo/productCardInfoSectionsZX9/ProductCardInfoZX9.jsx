@@ -8,7 +8,7 @@ import { v4 as uuidv4 } from "uuid";
 import CardInfo from "./CardInfo";
 import FeaturesSection from "./FeaturesSection";
 import ProductsCard from "../../MenuCard/ProductsCard";
-import ShopAbout from "../../AudioSpicersAbout/ShopAbout";
+import ShopAbout from "../../audioSpicersAbout/ShopAbout";
 
 // images
 import productImg from "../CardProductInfoImg/image-productZX9.jpg";

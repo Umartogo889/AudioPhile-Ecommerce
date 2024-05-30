@@ -8,7 +8,7 @@ import ProductsCard from "../components/MenuCard/ProductsCard";
 import XX99Headphones from "../components/HeadPhones/CategoryProduct/XX99Headphones";
 import XX992Headphone from "../components/HeadPhones/CategoryProduct/XX992Headphone";
 import HeaderHeadphones from "../components/HeaderHero/HeaderHeadphones";
-import ShopAbout from "../components/AudioSpicersAbout/ShopAbout";
+import ShopAbout from "../components/audioSpicersAbout/ShopAbout";
 
 function Headphone({ SetopenLoader }) {
   setTimeout(() => {
