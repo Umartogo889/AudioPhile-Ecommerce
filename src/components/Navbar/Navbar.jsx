@@ -34,10 +34,6 @@ function Navbar() {
       SetShowChecOut(false);
     }
   }
-  const BtnRemoveAll = (card, totalPrice) => {
-    localStorage.removeItem(card);
-    localStorage.removeItem(totalPrice);
-  };
 
   return (
     <>
@@ -66,13 +62,7 @@ function Navbar() {
                   <div className="ShowChecOut-textBlock">
                     <div className="card-header">
                       <h3>CART (0)</h3>
-                      <span
-                        onClick={() => {
-                          BtnRemoveAll("card", "totalPrice");
-                        }}
-                      >
-                        Remove all
-                      </span>
+                      <span>Remove all</span>
                     </div>
                     <div className="card-list">
                       <ul>

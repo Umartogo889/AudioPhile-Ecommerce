@@ -60,7 +60,7 @@ function CardInfo({
                     >
                       +
                     </button>
-                  </div>
+                  </div>  
                   <button
                     onClick={() => sendOrder(1)}
                     type="button"

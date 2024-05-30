@@ -26,23 +26,35 @@ function App() {
     JSON.parse(localStorage.getItem("card")) || []
   );
 
-  const [totalPrice, setTotalPrice] = useState(
-    JSON.parse(localStorage.getItem(+"totalPrice"))
-  );
-
-  function cardInfo(card, id) {
-    SetOrdersBasket((prev) => {
-      return [...prev, card];
-    });
-    setTotalPrice(totalPrice + id);
-    localStorage.setItem("totalPrice", totalPrice);
-  }
-
   // set cardinfo to localstorage
   localStorage.setItem("card", JSON.stringify(OrdersBasket));
 
   // loader
   const [openLoader, SetopenLoader] = useState(true);
+
+  function cardInfo(card, id, quality) {
+    // change order
+    const filterOrder = OrdersBasket.map((order) => {
+      if (order.id === id) {
+        return { ...order, total: quality };
+      }
+      return order;
+    });
+
+    let orderid = 0;
+    OrdersBasket.forEach((order) => {
+      if (order.id === id) {
+        SetOrdersBasket(filterOrder);
+        orderid = order.id;
+      }
+    });
+
+    if (OrdersBasket.length >= 0 && orderid !== id) {
+      SetOrdersBasket((prev) => {
+        return [...prev, card];
+      });
+    }
+  }
 
   setTimeout(() => {
     SetopenLoader(false);

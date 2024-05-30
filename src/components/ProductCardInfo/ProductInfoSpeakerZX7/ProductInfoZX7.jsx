@@ -44,13 +44,13 @@ function ProductCardInfoZX7({ cardInfo }) {
   function productPrice() {
     productCardInfo.map((productInfo) => {
       let obj = {
-        id: 2,
+        id: 4,
         img: productImg,
         name: productInfo.name,
         total: PurchaseAmount,
         price: productInfo.Cash * PurchaseAmount,
       };
-      cardInfo(obj, obj.price);
+      cardInfo(obj, obj.id, PurchaseAmount);
     });
   }
 

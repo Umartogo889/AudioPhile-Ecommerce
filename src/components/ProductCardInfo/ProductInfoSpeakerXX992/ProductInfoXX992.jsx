@@ -9,13 +9,14 @@ import productImg from "../CardProductInfoImg/image-product-xx992.jpg";
 import CardInfo from "./CardInfoXX992";
 import FeaturesSection from "./FeaturesSectionXX992";
 import ProductsCard from "../../MenuCard/ProductsCard";
-import ShopAbout from "../../audioSpicersAbout/ShopAbout"
+import ShopAbout from "../../audioSpicersAbout/ShopAbout";
 
 function ProductCardInfoZX7({ cardInfo }) {
+  const [PurchaseAmount, SetPurchaseAmount] = useState(1);
+
   const productCardInfo = [
     {
       id: uuidv4(),
-      mainImg: "../CardProductInfoImg/category-img-speakers@2x.png",
       name: "XX99 MARK II HEADPHONES",
       title:
         "The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.",
@@ -30,25 +31,19 @@ function ProductCardInfoZX7({ cardInfo }) {
         4: "3.5mm 5m audio cable",
         5: "Travel bag",
       },
-      galeryImg: {
-        1: "./CardProductInfoImg/image-gallery-yx9-1.jpg",
-        2: "./CardProductInfoImg/image-gallery-yx9-2.jpg",
-        3: "./CardProductInfoImg/image-gallery-yx9-3.jpg",
-      },
     },
   ];
-  const [PurchaseAmount, SetPurchaseAmount] = useState(1);
 
   function productPrice() {
     productCardInfo.map((productInfo) => {
       let obj = {
-        id: 1,
+        id: 5,
         img: productImg,
-        name: "XX99 MARK II ",
+        name: "XX99 MARK II",
         total: PurchaseAmount,
         price: productInfo.Cash * PurchaseAmount,
       };
-      cardInfo(obj, obj.price);
+      cardInfo(obj, obj.id, PurchaseAmount);
     });
   }
   return (

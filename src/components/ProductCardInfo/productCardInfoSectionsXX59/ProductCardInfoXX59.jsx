@@ -12,10 +12,10 @@ import ProductsCard from "../../MenuCard/ProductsCard";
 import ShopAbout from "../../audioSpicersAbout/ShopAbout";
 
 function ProductCardInfoXX59({ cardInfo }) {
+  const [PurchaseAmount, SetPurchaseAmount] = useState(1);
   const productCardInfo = [
     {
       id: uuidv4(),
-      mainImg: "../CardProductInfoImg/category-img-speakers@2x.png",
       name: "XX59 HEADPHONES",
       title:
         "Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.",
@@ -29,14 +29,8 @@ function ProductCardInfoXX59({ cardInfo }) {
         4: "3.5mm 5m audio cable",
         5: "10m optical cable",
       },
-      galeryImg: {
-        1: "./CardProductInfoImg/image-gallery-yx9-1.jpg",
-        2: "./CardProductInfoImg/image-gallery-yx9-2.jpg",
-        3: "./CardProductInfoImg/image-gallery-yx9-3.jpg",
-      },
     },
   ];
-  const [PurchaseAmount, SetPurchaseAmount] = useState(1);
 
   function productPrice() {
     productCardInfo.map((productInfo) => {
@@ -47,7 +41,7 @@ function ProductCardInfoXX59({ cardInfo }) {
         total: PurchaseAmount,
         price: productInfo.Cash * PurchaseAmount,
       };
-      cardInfo(obj, obj.price);
+      cardInfo(obj, obj.id, PurchaseAmount);
     });
   }
 

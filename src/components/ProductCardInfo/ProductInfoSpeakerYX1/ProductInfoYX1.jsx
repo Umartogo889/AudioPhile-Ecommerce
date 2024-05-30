@@ -13,10 +13,10 @@ import ProductsCard from "../../MenuCard/ProductsCard";
 import ShopAbout from "../../audioSpicersAbout/ShopAbout";
 
 function ProductCardInfoYX1({ cardInfo }) {
+  const [PurchaseAmount, SetPurchaseAmount] = useState(1);
   const productCardInfo = [
     {
       id: uuidv4(),
-      mainImg: "../CardProductInfoImg/category-img-speakers@2x.png",
       name: "YX1 WIRELESS EARPHONES",
       newProduct: "new product",
       title:
@@ -31,25 +31,19 @@ function ProductCardInfoYX1({ cardInfo }) {
         4: "USB-C charging cable",
         5: "Travel pouch",
       },
-      galeryImg: {
-        1: "./CardProductInfoImg/image-gallery-yx9-1.jpg",
-        2: "./CardProductInfoImg/image-gallery-yx9-2.jpg",
-        3: "./CardProductInfoImg/image-gallery-yx9-3.jpg",
-      },
     },
   ];
-  const [PurchaseAmount, SetPurchaseAmount] = useState(1);
 
   function productPrice() {
     productCardInfo.map((productInfo) => {
       let obj = {
-        id: 1,
+        id: 6,
         img: productImg,
         name: "YX1 EARPHONE",
         total: PurchaseAmount,
         price: productInfo.Cash * PurchaseAmount,
       };
-      cardInfo(obj, obj.price);
+      cardInfo(obj, obj.id, PurchaseAmount);
     });
   }
 

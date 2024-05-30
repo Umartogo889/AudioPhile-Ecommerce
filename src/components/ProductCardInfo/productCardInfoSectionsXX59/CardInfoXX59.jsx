@@ -8,8 +8,8 @@ function CardInfoXX59({
 }) {
   const sendOrder = (quality) => {
     productPrice();
-    SetPurchaseAmount(quality);
   };
+
   return (
     <>
       {productCardInfo.map((cardInfo) => {
@@ -38,9 +38,6 @@ function CardInfoXX59({
                           PurchaseAmount <= 0 ? 0 : PurchaseAmount - 1
                         )
                       }
-                      onChange={(e) => {
-                        e.target.value;
-                      }}
                     >
                       -
                     </button>
@@ -52,9 +49,6 @@ function CardInfoXX59({
                       {PurchaseAmount}
                     </h3>
                     <button
-                      onChange={(e) => {
-                        e.target.value;
-                      }}
                       className="quantity-button"
                       onClick={() => SetPurchaseAmount(PurchaseAmount + 1)}
                     >
@@ -63,10 +57,7 @@ function CardInfoXX59({
                   </div>
                   <button
                     type="button"
-                    onClick={() => sendOrder(1)}
-                    onChange={(e) => {
-                      e.target.value;
-                    }}
+                    onClick={sendOrder}
                     className="product-card-info-main-btn"
                   >
                     Add to cart

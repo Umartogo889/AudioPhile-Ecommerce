@@ -14,10 +14,11 @@ import ShopAbout from "../../audioSpicersAbout/ShopAbout";
 import productImg from "../CardProductInfoImg/image-productZX9.jpg";
 
 function ProductCardInfoZX9({ cardInfo }) {
+  const [PurchaseAmount, SetPurchaseAmount] = useState(1);
+
   const productCardInfo = [
     {
       id: uuidv4(),
-      mainImg: "../CardProductInfoImg/category-img-speakers@2x.png",
       name: "ZX9 SPEAKER",
       title:
         "Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.",
@@ -32,26 +33,19 @@ function ProductCardInfoZX9({ cardInfo }) {
         4: "3.5mm 10m audio cable",
         5: "10m optical cable",
       },
-      galeryImg: {
-        1: "./CardProductInfoImg/image-gallery-yx9-1.jpg",
-        2: "./CardProductInfoImg/image-gallery-yx9-2.jpg",
-        3: "./CardProductInfoImg/image-gallery-yx9-3.jpg",
-      },
     },
   ];
-
-  const [PurchaseAmount, SetPurchaseAmount] = useState(1);
 
   function productPrice() {
     productCardInfo.map((productInfo) => {
       let obj = {
-        id: 1,
+        id: 11,
         img: productImg,
         name: productInfo.name,
         total: PurchaseAmount,
         price: productInfo.Cash * PurchaseAmount,
       };
-      cardInfo(obj, obj.price);
+      cardInfo(obj, obj.id, PurchaseAmount);
     });
   }
 
